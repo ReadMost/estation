@@ -1,4 +1,4 @@
-<%@ page import="test.java.DbManager" %>
+
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %><%--
@@ -14,31 +14,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  <%
-    DbManager db = new DbManager();
-    Connection con = db.getConnection();
-    if (con == null) {
-      out.println("system failed");
-    } else {
-      String sql = "SELECT * FROM Employee";
+Hello World
 
-      Statement statement = con.createStatement();
-      ResultSet result = statement.executeQuery(sql);
-
-      int count = 0;
-
-      while (result.next()){
-        String lname = result.getString("Lname");
-        String fname = result.getString("Fname");
-        String gender = result.getString("Gender");
-        String salary = result.getString("Salary");
-
-
-        String output = "<p>User #%d: %s - %s - %s - %s</p>";
-        out.println(String.format(output, ++count, lname, fname, gender, salary, "\n"));
-      }
-    }
-
-  %>
   </body>
 </html>
