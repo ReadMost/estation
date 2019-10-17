@@ -1,11 +1,18 @@
 package com.javahelps.restservice.entity;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
+
+
 
     @Id
     @GeneratedValue
@@ -43,5 +50,21 @@ public class User {
     private String lName;
     private String fName;
 
+    public Set<Passenger> getPassengers() {
+        return passengers;
+    }
+
+    public void addPassengers(Passenger passengers) {
+        this.passengers.add(passengers);
+    }
+
+    public User(String lName, String fName) {
+        setlName(lName);
+        setfName(fName);
+    }
+
+    @OneToMany(mappedBy="user")
+    @Value("${some.key:}")
+    private Set<Passenger> passengers;
 
 }
