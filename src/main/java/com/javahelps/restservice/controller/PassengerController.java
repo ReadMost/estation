@@ -3,7 +3,10 @@ package com.javahelps.restservice.controller;
 import com.javahelps.restservice.entity.Passenger;
 import com.javahelps.restservice.repository.PassengerRepository;
 import com.javahelps.restservice.repository.UserRepository;
+import com.javahelps.restservice.serializer.PassengerSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +16,11 @@ import com.javahelps.restservice.entity.User;
 
 import javassist.tools.web.BadHttpRequest;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping(path = "/passengers")
+
 public class PassengerController {
 
     @Autowired
@@ -34,11 +40,10 @@ public class PassengerController {
     }
 
     @PostMapping(consumes = "application/json")
-    public Passenger create(@RequestBody Passenger passenger) {
-        System.out.println( passenger.fName + "         ------------------------------");
-        User u = repository_user.save(new User(passenger.lName, passenger.fName));
-        passenger.setUser(u);
-        return repository.save(passenger);
+    public Passenger create(@RequestBody PassengerSerializer passenger) {
+        User u = repository_user.save(new User(passenger.getUser().getLName(),passenger.getUser().getFName()));
+        Passenger p = repository.save(new Passenger(passenger.getEmail(), passenger.getPassword(), passenger.getPhone(), u));
+        return p;
 
 
     }

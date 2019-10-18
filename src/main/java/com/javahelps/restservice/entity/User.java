@@ -1,22 +1,26 @@
 package com.javahelps.restservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class User {
+@Table(name = "user")
+public class User implements Serializable {
 
 
 
     @Id
     @GeneratedValue
     private Long id;
+
 
     public String getlName() {
         return lName;
@@ -58,12 +62,17 @@ public class User {
         this.passengers.add(passengers);
     }
 
+    public User() {
+    }
+
     public User(String lName, String fName) {
         setlName(lName);
         setfName(fName);
     }
 
-    @OneToMany(mappedBy="user")
+    @JsonBackReference
+    @Fetch(FetchMode.JOIN)
+    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
     @Value("${some.key:}")
     private Set<Passenger> passengers;
 

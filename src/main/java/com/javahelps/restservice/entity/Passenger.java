@@ -1,19 +1,28 @@
 package com.javahelps.restservice.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.util.*;
 import javax.persistence.*;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
+
 @Entity
 public class Passenger {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @GeneratedValue
     private Long id;
 
+    @Column(unique = true)
     private String phone;
 
+    public Passenger(String email, String password, String phone, User user) {
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.user = user;
+    }
 
+    public Passenger() {
+    }
 
     public User getUser() {
         return user;
@@ -59,11 +68,13 @@ public class Passenger {
         this.password = password;
     }
 
+    @Column(unique = true)
     private String email;
     private String password;
-    public String fName;
-    public String lName;
-    @ManyToOne
-    @JoinColumn(name="user_fk")
+
+    @JsonIgnore
+    @JsonManagedReference
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name="user_id")
     private User user;
 }
