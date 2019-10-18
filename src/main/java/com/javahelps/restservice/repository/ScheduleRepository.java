@@ -1,14 +1,12 @@
 package com.javahelps.restservice.repository;
 
+import com.javahelps.restservice.entity.Schedule;
+import com.javahelps.restservice.entity.Station;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import com.javahelps.restservice.entity.Passenger;
-
-
-import java.util.Optional;
 
 @RestResource(exported = false)
-public interface PassengerRepository extends JpaRepository<Passenger, Long> {
-    Optional<Passenger> findByEmail(String email);
+public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
+
 }

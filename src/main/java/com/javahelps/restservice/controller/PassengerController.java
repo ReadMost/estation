@@ -17,6 +17,7 @@ import com.javahelps.restservice.entity.User;
 import javassist.tools.web.BadHttpRequest;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/passengers")
@@ -33,7 +34,14 @@ public class PassengerController {
     public Iterable<Passenger> findAll() {
         return repository.findAll();
     }
+    @GetMapping("/check/{username}")
+    public String check(@PathVariable("username") String username) {
 
+        Optional<Passenger> credentials = PassengerRepository.findByEmail(emal);
+
+        return credentials.isPresent() ? "exist" : "doesn't exist";
+
+    }
     @GetMapping(path = "/{id}")
     public Passenger find(@PathVariable("id") Long id) {
         return repository.findOne(id);
