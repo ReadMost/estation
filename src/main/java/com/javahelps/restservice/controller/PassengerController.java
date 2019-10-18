@@ -34,14 +34,13 @@ public class PassengerController {
     public Iterable<Passenger> findAll() {
         return repository.findAll();
     }
-    @GetMapping("/check/{email}")
-    public String check(@PathVariable("email") String email) {
-
-        Optional<Passenger> credentials = PassengerRepository.findByEmail(email);
-
-        return credentials.isPresent() ? "exist" : "doesn't exist";
-
-    }
+//    @GetMapping("/check/{email}")
+//    public String check(@PathVariable("email") String email) {
+//
+//        Passenger credentials = PassengerRepository.findByEmail(email);
+//
+//        return credentials;
+//    }
     @GetMapping(path = "/{id}")
     public Passenger find(@PathVariable("id") Long id) {
         return repository.findOne(id);

@@ -7,21 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42b87f2-0bb1-4a99-9b1a-11d2439a0d02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Day.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Train.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/ScheduleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/StationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/config/CustomWebSecurityConfigurerAdapter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="43" column="106" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="106" />
+            <state relative-caret-position="137">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#760#761#0" expanded="true" />
@@ -93,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="233">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Passenger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            <state relative-caret-position="-175">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,10 +211,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Passenger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/config/SpringSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/config/CustomWebSecurityConfigurerAdapter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java" />
       </list>
     </option>
@@ -291,6 +277,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="estation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="estation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restservice" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estation" type="b2602c69:ProjectViewProjectNode" />
@@ -471,7 +466,7 @@
       <workItem from="1571068430846" duration="1877000" />
       <workItem from="1571147339255" duration="4537000" />
       <workItem from="1571241363159" duration="17508000" />
-      <workItem from="1571329272867" duration="11976000" />
+      <workItem from="1571329272867" duration="12209000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1571152523608</created>
@@ -501,11 +496,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571383651263</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add push">
+      <created>1571385293523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571385293523</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add push">
+      <created>1571385362009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571385362009</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35898000" />
+    <option name="totallyTimeSpent" value="36131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="0" />
@@ -522,7 +531,7 @@
       <window_info id="Web" order="8" sideWeight="0.3244898" side_tool="true" weight="0.26037195" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33013698" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33013698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -531,7 +540,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49928468" weight="0.32876712" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32876712" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -557,7 +566,8 @@
     <MESSAGE value="adding connection to sql and according tutorial" />
     <MESSAGE value="adding change" />
     <MESSAGE value="adding serialier" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding serialier" />
+    <MESSAGE value="add push" />
+    <option name="LAST_COMMIT_MESSAGE" value="add push" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/jb.java" />
@@ -753,18 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="106" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/config/CustomWebSecurityConfigurerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -800,22 +798,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Passenger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="-175">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Passenger.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="233">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -823,7 +833,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
