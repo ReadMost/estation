@@ -15,8 +15,6 @@ import java.util.Set;
 @Table(name = "user")
 public class User implements Serializable {
 
-
-
     @Id
     @GeneratedValue
     private Long id;

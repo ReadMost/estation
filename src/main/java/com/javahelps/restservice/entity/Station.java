@@ -10,20 +10,17 @@ import java.util.Set;
 @Entity
 @Table(name = "station")
 public class Station {
-    @ManyToMany(mappedBy = "station")
-
-    private Set<Schedule> schedules=new HashSet<>(0);
+    @OneToMany(mappedBy = "station")
+    private Set<Station_Schedule> station_schedules=new HashSet<>(0);
 
     private String name;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "station_id")
     private Long id;
 
-
-    private String arrivalTime;
-    private String departureTime;
-
+    @Column
     public String getName() {
         return name;
     }
@@ -40,19 +37,11 @@ public class Station {
         this.id = id;
     }
 
-    public String getArrivalTime() {
-        return arrivalTime;
+    public Set<Station_Schedule> getSchedules() {
+        return station_schedules;
     }
 
-    public void setArrivalTime(String arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
-    public String getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(String departureTime) {
-        this.departureTime = departureTime;
+    public void setSchedules(Set<Station_Schedule> schedules) {
+        this.station_schedules = schedules;
     }
 }

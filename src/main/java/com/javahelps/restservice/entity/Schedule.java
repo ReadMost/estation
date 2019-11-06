@@ -13,23 +13,24 @@ public class Schedule {
     @JoinColumn(name="train_id", nullable = false)
     private Train train;
 
+    @Column(name = "schedule_id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-   private int id;
+    private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="type_id", nullable = false)
     private Type type;
 
 
-    @ManyToMany(cascade = { CascadeType.ALL },fetch = FetchType.EAGER)
+  /*  @ManyToMany(cascade = { CascadeType.ALL },fetch = FetchType.EAGER)
     @JoinTable(
             name = "station_schedule",
             joinColumns = { @JoinColumn(name = "schedule_id") },
             inverseJoinColumns = { @JoinColumn(name = "station_id") }
-    )
-   private Set<Station> station=new HashSet<>(0);
-
+    )*/
+    @OneToMany(mappedBy = "schedule")
+    private Set<Station_Schedule> station_schedules=new HashSet<>(0);
 
     public void setTrain(Train train) {
         this.train = train;
@@ -43,6 +44,7 @@ public class Schedule {
         this.id = id;
     }
 
+    @Column
     public Type getType() {
         return type;
     }
@@ -51,11 +53,11 @@ public class Schedule {
         this.type = type;
     }
 
-    public Set<Station> getStation() {
-        return station;
+    public void setStation(Set<Station_Schedule> station) {
+        this.station_schedules = station;
     }
 
-    public void setStation(Set<Station> station) {
-        this.station = station;
+    public Set<Station_Schedule> getStation_schedules() {
+        return station_schedules;
     }
 }
