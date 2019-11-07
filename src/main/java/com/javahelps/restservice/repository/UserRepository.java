@@ -8,4 +8,5 @@ import com.javahelps.restservice.entity.User;
 @RestResource(exported = false)
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    User findByEmail(String email);
 }

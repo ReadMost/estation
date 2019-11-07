@@ -14,9 +14,8 @@ public class Passenger {
     @Column(unique = true)
     private String phone;
 
-    public Passenger(String email, String password, String phone, User user) {
-        this.email = email;
-        this.password = password;
+    public Passenger(String phone, User user) {
+
         this.phone = phone;
         this.user = user;
     }
@@ -38,8 +37,6 @@ public class Passenger {
         return "Passenger{" +
                 "id=" + id +
                 ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 
@@ -52,25 +49,9 @@ public class Passenger {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Column(unique = true)
-    private String email;
-    private String password;
 
     @JsonIgnore
     @JsonManagedReference
