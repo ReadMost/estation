@@ -1,7 +1,7 @@
 package com.javahelps.restservice.config;
 
 
-import com.javahelps.restservice.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,22 +12,31 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.javahelps.restservice.service.UserService;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    /**
+     * userService is not recognised by intlij
+     */
     @Autowired
     private UserService userService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
         http
                 .authorizeRequests()
-                .anyRequest().authenticated()
+                .antMatchers("/pass/*").hasRole("PASSNGER")
+                .antMatchers("/passengers/**").hasRole("PASSENGER")
                 .and()
                 .httpBasic()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
     }
 
     @Bean
@@ -43,8 +52,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return auth;
     }
 
+
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        http.csrf().disable();
         auth.authenticationProvider(authenticationProvider());
     }
 

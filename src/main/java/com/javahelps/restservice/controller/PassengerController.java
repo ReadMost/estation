@@ -23,50 +23,50 @@ import java.util.Optional;
 @RequestMapping(path = "/passengers")
 
 public class PassengerController {
+
+    @Autowired
+    private PassengerRepository repository;
+
+    @Autowired
+    private UserRepository repository_user;
+
+    @GetMapping
+    public Iterable<Passenger> findAll() {
+        return repository.findAll();
+    }
+//    @GetMapping("/check/{email}")
+//    public String check(@PathVariable("email") String email) {
 //
-//    @Autowired
-//    private PassengerRepository repository;
+//        Passenger credentials = PassengerRepository.findByEmail(email);
 //
-//    @Autowired
-//    private UserRepository repository_user;
-//
-//    @GetMapping
-//    public Iterable<Passenger> findAll() {
-//        return repository.findAll();
+//        return credentials;
 //    }
-////    @GetMapping("/check/{email}")
-////    public String check(@PathVariable("email") String email) {
-////
-////        Passenger credentials = PassengerRepository.findByEmail(email);
-////
-////        return credentials;
-////    }
-//    @GetMapping(path = "/{id}")
-//    public Passenger find(@PathVariable("id") Long id) {
-//        return repository.findOne(id);
-//    }
-//
-//    @PostMapping(consumes = "application/json")
-//    public Passenger create(@RequestBody PassengerSerializer passenger) {
-//        User u = repository_user.save(new User());
-//        Passenger p = repository.save(new Passenger(passenger.getPhone(), u));
-//        return p;
-//
-//
-//    }
-//
-//    @DeleteMapping(path = "/{id}")
-//    public void delete(@PathVariable("id") Long id) {
-//        repository.delete(id);
-//    }
-//
-//    @PutMapping(path = "/{id}")
-//    public Passenger update(@PathVariable("id") Long id, @RequestBody Passenger passenger) throws BadHttpRequest {
-//        if (repository.exists(id)) {
-//            return repository.save(passenger);
-//        } else {
-//            throw new BadHttpRequest();
-//        }
-//    }
+    @GetMapping(path = "/{id}")
+    public Passenger find(@PathVariable("id") Long id) {
+        return repository.findOne(id);
+    }
+
+    @PostMapping(consumes = "application/json")
+    public Passenger create(@RequestBody PassengerSerializer passenger) {
+        User u = repository_user.save(new User());
+        Passenger p = repository.save(new Passenger(passenger.getPhone(), u));
+        return p;
+
+
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void delete(@PathVariable("id") Long id) {
+        repository.delete(id);
+    }
+
+    @PutMapping(path = "/{id}")
+    public Passenger update(@PathVariable("id") Long id, @RequestBody Passenger passenger) throws BadHttpRequest {
+        if (repository.exists(id)) {
+            return repository.save(passenger);
+        } else {
+            throw new BadHttpRequest();
+        }
+    }
 
 }

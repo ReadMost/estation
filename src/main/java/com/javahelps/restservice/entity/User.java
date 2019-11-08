@@ -1,17 +1,20 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.javahelps.restservice.validators.EmailValidator;
+import com.javahelps.restservice.validators.ValidEmail;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import javax.persistence.*;
-import java.util.Collection;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
@@ -23,7 +26,13 @@ public class User {
 
     private String firstName;
     private String lastName;
+    @ValidEmail
+    @NotNull
+    @NotEmpty
     private String email;
+
+    @NotNull
+    @NotEmpty
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
@@ -33,10 +42,20 @@ public class User {
                     name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
-    private Collection<Role> roles;
+    private Collection<Role> roles =  new ArrayList<Role>();
 
-    public User() {
+    public User(){
+
     }
+    public User(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+
+    }
+
+
 
     public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
         this.firstName = firstName;
@@ -92,6 +111,10 @@ public class User {
 
     public void setRoles(Collection<Role> roles) {
         this.roles = roles;
+    }
+
+    public void addRoles(Role role){
+        this.roles.add(role);
     }
 
     @Override
