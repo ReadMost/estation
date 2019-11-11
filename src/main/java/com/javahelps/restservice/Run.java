@@ -28,11 +28,12 @@ public class Run {
         User user = new User(
                 "Memory",
                 "Not Found",
-                "info@memorynotfound.com",
-                passwordEncoder.encode("password"),
+                "rauan.ru@gmail.com",
+                passwordEncoder.encode("qwerty"),
                 Arrays.asList(
-                        new Role("ROLE_USER"),
-                        new Role("ROLE_ADMIN")));
+                        new Role("ROLE_PASSENGER"),
+                        new Role("ROLE_MANAGER"),
+                        new Role("ROLE_EMPLOYEE")));
 
         if (userRepository.findByEmail(user.getEmail()) == null){
             userRepository.save(user);

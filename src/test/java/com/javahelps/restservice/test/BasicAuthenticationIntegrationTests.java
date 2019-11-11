@@ -26,14 +26,14 @@ public class BasicAuthenticationIntegrationTests {
     @Test
     public void accessWithValidCredentials() throws Exception {
         this.mockMvc
-                .perform(get("/users").with(httpBasic("info@memorynotfound.com", "password")))
+                .perform(get("/users").with(httpBasic("rauan.ru@gmail.com", "qwerty")))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void accessWithInValidCredentials() throws Exception {
         this.mockMvc
-                .perform(get("/users").with(httpBasic("info@memorynotfound.com", "invalidPassword")))
+                .perform(get("/users").with(httpBasic("rauan.ru@gmail.com", "qwerty")))
                 .andExpect(status().is4xxClientError());
     }
 

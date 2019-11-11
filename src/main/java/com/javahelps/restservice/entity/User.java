@@ -5,6 +5,7 @@ import com.javahelps.restservice.validators.EmailValidator;
 import com.javahelps.restservice.validators.ValidEmail;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -26,7 +27,7 @@ public class User {
 
     private String firstName;
     private String lastName;
-    @ValidEmail
+    @Email(message="Invalid email")
     @NotNull
     @NotEmpty
     private String email;
@@ -142,5 +143,6 @@ public class User {
     @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
     @Value("${some.key:}")
     private Set<Passenger> passengers;
+
 
 }
