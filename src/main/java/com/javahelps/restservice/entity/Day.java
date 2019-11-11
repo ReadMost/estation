@@ -14,7 +14,6 @@ public class Day {
     private String name;
 
 
-
     @ManyToMany(cascade = { CascadeType.ALL },fetch = FetchType.EAGER)
     @JoinTable(
             name = "type_day",

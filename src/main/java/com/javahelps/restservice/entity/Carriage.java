@@ -7,7 +7,11 @@ import java.util.Set;
 @Entity
 @Table(name="carriage")
 public class Carriage {
+
     private int id;
+    private int actualSeats;
+    private String type;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id",nullable = false)
     private Train train;
@@ -20,11 +24,6 @@ public class Carriage {
     @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Seats> seat=new HashSet<>(0);
-
-
-    private int actualSeats;
-    private String type;
-
 
     public Train getTrain() {
         return train;

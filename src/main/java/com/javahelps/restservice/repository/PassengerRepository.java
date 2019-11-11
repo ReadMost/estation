@@ -10,5 +10,4 @@ import java.util.Optional;
 
 @RestResource(exported = false)
 public interface PassengerRepository extends JpaRepository<Passenger, Long> {
-    Passenger findByEmail(String email);
 }

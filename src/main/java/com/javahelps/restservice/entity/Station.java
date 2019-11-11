@@ -1,47 +1,58 @@
 package com.javahelps.restservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.*;
+import java.sql.Time;
 
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "station")
 public class Station {
-    @OneToMany(mappedBy = "station")
-    private Set<Station_Schedule> station_schedules=new HashSet<>(0);
-
-    private String name;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "station_id")
     private Long id;
+    private String name;
+    private Time arrTime;
+    private Time depTime;
+    private int dayNum;
 
-    @Column
+    @JsonBackReference
+    @ManyToOne
+
+    private Schedule schedule;
+
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Long getId() {
         return id;
     }
-
+    public int getDayNum() {
+        return dayNum;
+    }
+    public Time getDepTime() {
+        return depTime;
+    }
+    public Time getArrTime() {
+        return arrTime;
+    }
+    public void setArrTime(Time arrTime) {
+        this.arrTime = arrTime;
+    }
+    public void setDepTime(Time depTime) { this.depTime = depTime;   }
+    public void setDayNum(int dayNum) {
+        this.dayNum = dayNum;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Set<Station_Schedule> getSchedules() {
-        return station_schedules;
-    }
-
-    public void setSchedules(Set<Station_Schedule> schedules) {
-        this.station_schedules = schedules;
+    public void setSchedules(Schedule schedule) {
+        this.schedule = schedule;
     }
 }
