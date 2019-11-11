@@ -18,23 +18,22 @@ public class Type {
 
     @OneToMany(mappedBy = "type",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
-    private Set<Schedule>schedules=new HashSet<>();
-
+    private Set<Schedule> schedules=new HashSet<>();
 
     public int getId() {
         return id;
     }
+    public Set<Day> getDay() {
+        return day;
+    }
+    public Set<Schedule> getSchedules() {  return schedules;  }
 
     public void setId(int id) {
         this.id = id;
     }
-
-    public Set<Day> getDay() {
-        return day;
-    }
-
     public void setDay(Set<Day> day) {
         this.day = day;
     }
+    public void setSchedules(Set<Schedule> schedules) { this.schedules = schedules;  }
 
 }

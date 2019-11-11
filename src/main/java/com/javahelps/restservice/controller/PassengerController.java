@@ -5,19 +5,11 @@ import com.javahelps.restservice.repository.PassengerRepository;
 import com.javahelps.restservice.repository.UserRepository;
 import com.javahelps.restservice.serializer.PassengerSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.bind.annotation.*;
-
 import org.springframework.web.bind.annotation.RestController;
-
 import com.javahelps.restservice.entity.User;
-
-
 import javassist.tools.web.BadHttpRequest;
 
-import javax.validation.Valid;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/passengers")
