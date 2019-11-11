@@ -40,8 +40,8 @@ public class PassengerController {
 
     @PostMapping(consumes = "application/json")
     public Passenger create(@RequestBody PassengerSerializer passenger) {
-        User u = repository_user.save(new User(passenger.getUser().getLName(),passenger.getUser().getFName()));
-        Passenger p = repository.save(new Passenger(passenger.getEmail(), passenger.getPassword(), passenger.getPhone(), u));
+        User u = repository_user.save(new User());
+        Passenger p = repository.save(new Passenger(passenger.getPhone(), u));
         return p;
 
 
