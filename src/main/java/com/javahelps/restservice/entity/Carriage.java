@@ -1,17 +1,19 @@
 package com.javahelps.restservice.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name="carriage")
-public class Carriage {
+public class Carriage implements Serializable {
 
     private int id;
     private int actualSeats;
     private String type;
 
+    @Id
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id",nullable = false)
     private Train train;
@@ -21,13 +23,9 @@ public class Carriage {
     private int number;
 
 
-    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
-            orphanRemoval = true,fetch = FetchType.EAGER)
-    private Set<Seats> seat=new HashSet<>(0);
-
-    public Train getTrain() {
-        return train;
-    }
+//    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
+//            orphanRemoval = true,fetch = FetchType.EAGER)
+//    private Set<Seats> seat=new HashSet<>(0);
 
     public void setTrain(Train train) {
         this.train = train;
@@ -49,13 +47,13 @@ public class Carriage {
         this.number = number;
     }
 
-    public Set<Seats> getSeat() {
-        return seat;
-    }
-
-    public void setSeat(Set<Seats> seat) {
-        this.seat = seat;
-    }
+//    public Set<Seats> getSeat() {
+//        return seat;
+//    }
+//
+//    public void setSeat(Set<Seats> seat) {
+//        this.seat = seat;
+//    }
 
     public int getActualSeats() {
         return actualSeats;
