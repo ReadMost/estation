@@ -22,5 +22,7 @@ public interface TrainRepository extends JpaRepository<Train, Long> {
     @Query(value = "select * FROM Train t, Schedule s, Station st1,  Station st2 where s.type_id=:d and t.train_id = s.train_id and St1.schedule_id = s.id  and  St2.schedule_id = s.id and ST1.name =:dep and ST2.name =:arr and TIME(ST1.dep_time) < TIME(ST2.dep_time) and ST1.day_num <= ST2.day_num GROUP BY t.train_id", nativeQuery = true)
     Set<Train> findByDateDepArr(@Param("d") int d, @Param("dep") String dep, @Param("arr") String arr);
 
+    @Query(value = "select * FROM carriage as c, Train t, Schedule s, Station st1,  Station st2 where t.train_id=c.train_id and c.train_id=:train and s.type_id=:d and t.train_id = s.train_id and St1.schedule_id = s.id  and  St2.schedule_id = s.id and ST1.name =:dep and ST2.name =:arr and TIME(ST1.dep_time) < TIME(ST2.dep_time) and ST1.day_num <= ST2.day_num GROUP BY t.train_id", nativeQuery = true)
+    Train findByDateDepArrByTrain(@Param("d") int d, @Param("dep") String dep, @Param("arr") String arr, @Param("train") Long train);
 
 }
