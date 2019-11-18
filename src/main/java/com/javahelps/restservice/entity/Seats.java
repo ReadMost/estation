@@ -4,19 +4,22 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "seats")
+@Table(name = "seats", uniqueConstraints = @UniqueConstraint(columnNames = {"seat_id", "carriage_id"}))
 public class Seats implements Serializable {
 
-//    @Id
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name="carriage_id")
-//    private Carriage carriage;
-
     @Id
+    @Column(name = "seat_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private int number;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "carriage_id")
+    private Carriage carriage;
+
+    public void setCarriage(Carriage carriage) {   this.carriage = carriage;   }
+
     public int getId() {
         return id;
     }
@@ -25,17 +28,9 @@ public class Seats implements Serializable {
         this.id = id;
     }
 
-//    public void setCarriage(Carriage carriage) {
-//        this.carriage = carriage;
-//    }
+    public int getNumber() {  return number; }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
+    public void setNumber(int number) {  this.number = number;    }
 
 
 }

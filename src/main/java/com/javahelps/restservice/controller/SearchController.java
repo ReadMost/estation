@@ -54,6 +54,20 @@ public class SearchController {
         return trains;
     }
 
+    @GetMapping("/onDate/{date}/depStation/{from}/arrStation/{to}/train/{train}/price")
+    public int getPrice(@PathVariable("date") String date,
+                        @PathVariable("from") String from,
+                        @PathVariable("to") String to,
+                        @PathVariable("train") Long train) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        java.util.Date yourDate = sdf.parse(date);
+        Calendar c = Calendar.getInstance();
+        c.setTime(yourDate);
+        int day = c.get(Calendar.DAY_OF_WEEK)%2+1;
+        int price = trainRepository.getPriceByTrain(day, from, to, train);
+        return price;
+    }
+
     @GetMapping("/onDate/{date}/depStation/{from}/arrStation/{to}/train/{train}")
     public Train findByDateDepArrByTrainM(@PathVariable("date") String date,
                                               @PathVariable("from") String from,

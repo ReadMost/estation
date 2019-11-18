@@ -7,14 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42b87f2-0bb1-4a99-9b1a-11d2439a0d02" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/SearchController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Carriage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Carriage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Seats.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Seats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Station.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/repository/TrainRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/repository/TrainRepository.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,20 +52,6 @@
         <item name="user_db@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="user_db: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="user_db@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="user_db: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="carriage: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="user_db@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="user_db: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="seats: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -117,7 +106,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -130,6 +119,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xiaomi\Desktop\sampleprojects\estation\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.javahelps.restservice.repository" />
@@ -267,12 +259,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@36df741d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5741a727" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@36df741d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@13c9e939" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5741a727" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@70224cc8" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -307,7 +299,12 @@
       <workItem from="1573368335031" duration="6000" />
       <workItem from="1573480941116" duration="5675000" />
       <workItem from="1573625822681" duration="19000" />
-      <workItem from="1573805285334" duration="1981000" />
+      <workItem from="1573805285334" duration="4606000" />
+      <workItem from="1573911137487" duration="9293000" />
+      <workItem from="1573982788174" duration="600000" />
+      <workItem from="1574001221843" duration="7371000" />
+      <workItem from="1574016763575" duration="302000" />
+      <workItem from="1574066863108" duration="1773000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1571152523608</created>
@@ -377,91 +374,6 @@
     <MESSAGE value="adding serialier" />
     <MESSAGE value="add push" />
     <option name="LAST_COMMIT_MESSAGE" value="add push" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>EStation</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

@@ -21,7 +21,7 @@ public class Station {
 
     @JsonBackReference
     @ManyToOne
-
+    @JoinColumn(name = "schedule_id")
     private Schedule schedule;
 
     public String getName() {
