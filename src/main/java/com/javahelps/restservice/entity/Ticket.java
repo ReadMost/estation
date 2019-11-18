@@ -1,9 +1,39 @@
 package com.javahelps.restservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
-public class Ticket {
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+//@JsonIgnoreProperties(ignoreUnknown = true,
+//        value = {"hibernateLazyInitializer", "handler", "created"})
+@JsonIgnoreProperties("user")
+public class Ticket implements java.io.Serializable {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    public Seats getSeat() {
+        return seat;
+    }
+
+    public Station getFrom() {
+        return from;
+    }
+
+    public Station getTo() {
+        return to;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -18,10 +48,12 @@ public class Ticket {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="carriage_id")
+    @JsonBackReference(value="carriage-get")
     private Carriage carriage;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
+    @JsonBackReference(value="user-get")
     private User user;
 
     public Ticket(int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price) {
@@ -40,6 +72,7 @@ public class Ticket {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="seats_id")
+    @JsonBackReference(value="seat-get")
     private Seats seat;
 
 
@@ -49,17 +82,32 @@ public class Ticket {
 
     @ManyToOne
     @JoinColumn(name="from_station_id")
+    @JsonBackReference(value="from-get")
     private Station from;
 
     @ManyToOne
     @JoinColumn(name="to_station_id")
+    @JsonBackReference(value="to-get")
     private Station to;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id")
+    @JsonBackReference(value="train-get")
     private Train train;
 
     private String status;
+
+    public Carriage getCarriage() {
+        return carriage;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Train getTrain() {
+        return train;
+    }
 
     public int getPrice() {
         return price;

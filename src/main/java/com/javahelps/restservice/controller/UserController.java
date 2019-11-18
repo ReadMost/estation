@@ -3,6 +3,7 @@ package com.javahelps.restservice.controller;
 
 import com.javahelps.restservice.entity.Role;
 import com.javahelps.restservice.repository.RoleRepository;
+import com.javahelps.restservice.serializer.UserSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 import java.util.Collection;
-import java.util.Collections;
+
 
 @RestController
 @RequestMapping(path = "/users")
@@ -40,14 +41,15 @@ public class UserController {
         return repository.findOne(id);
     }
 
+
     @PostMapping(consumes = "application/json")
-    public User create(@RequestBody  User user) {
+    public User create(@RequestBody UserSerializer user) {
         System.out.println(user.getRoles());
         Role r = createRoleIfNotFound("ROLE_PASSENGER");
         String encodedPassword = new BCryptPasswordEncoder().encode(user.getPassword());
         user.setPassword(encodedPassword);
         user.addRoles(r);
-        return repository.save(user);
+        return repository.save(user.createUser());
     }
 
     @DeleteMapping(path = "/{id}")

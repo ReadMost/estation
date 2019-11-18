@@ -1,7 +1,9 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -12,6 +14,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "station")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Station {
 
     @Id
@@ -74,12 +77,12 @@ public class Station {
         this.ticketTos = ticket_to;
     }
 
-    @JsonManagedReference
+    @JsonManagedReference(value="from-get")
     @OneToMany(mappedBy = "from",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticketFroms=new HashSet<>(0);
 
-    @JsonManagedReference
+    @JsonManagedReference(value="to-get")
     @OneToMany(mappedBy = "to",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticketTos=new HashSet<>(0);

@@ -39,6 +39,7 @@ public class TicketController {
                 seatsRepository.getOne(t.getSeat()), stationRepository.getOne(t.getFrom()), stationRepository.getOne(t.getTo()),
                 trainRepository.getOne(t.getTrain()), userRepository.getOne(t.getUser()), t.getPrice()
         );
+        ticket.setStatus("booked");
 
         return tickerRepository.save(ticket);
     }

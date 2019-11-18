@@ -1,6 +1,8 @@
 package com.javahelps.restservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="carriage", uniqueConstraints = @UniqueConstraint(columnNames = {"train_id", "carriage_id"}))
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Carriage implements Serializable {
 
     @Id
@@ -27,6 +30,7 @@ public class Carriage implements Serializable {
     private int number;
 
 
+    @JsonManagedReference(value="carriage-seat")
     @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Seats> seats=new HashSet<>(0);
@@ -93,7 +97,7 @@ public class Carriage implements Serializable {
         this.seats = seats;
     }
 
-    @JsonManagedReference
+    @JsonManagedReference(value="carriage-get")
     @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticket=new HashSet<>(0);

@@ -1,5 +1,7 @@
 package com.javahelps.restservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.springframework.scheduling.concurrent.ScheduledExecutorTask;
 
 import javax.persistence.*;
@@ -7,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Table(name="type")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Type {
 
     @Id
