@@ -27,10 +27,10 @@ public class Passenger {
         return user;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-        this.user.addPassengers(this);
-    }
+//    public void setUser(User user) {
+//        this.user = user;
+//        this.user.addPassengers(this);
+//    }
 
     @Override
     public String toString() {

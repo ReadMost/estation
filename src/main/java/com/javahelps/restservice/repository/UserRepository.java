@@ -1,5 +1,6 @@
 package com.javahelps.restservice.repository;
 
+import com.javahelps.restservice.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -9,6 +10,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import com.javahelps.restservice.entity.User;
 
 import javax.transaction.Transactional;
+import java.util.Set;
 
 @RestResource(exported = false)
 public interface UserRepository extends JpaRepository<User, Long> {
