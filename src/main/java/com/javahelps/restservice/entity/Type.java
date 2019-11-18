@@ -1,6 +1,7 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.springframework.scheduling.concurrent.ScheduledExecutorTask;
 
@@ -21,6 +22,7 @@ public class Type {
 
     @OneToMany(mappedBy = "type",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
+    @JsonManagedReference(value="type-schedule")
     private Set<Schedule> schedules=new HashSet<>();
 
     public int getId() {

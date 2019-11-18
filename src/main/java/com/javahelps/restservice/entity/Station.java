@@ -14,7 +14,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "station")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
 public class Station {
 
     @Id
@@ -25,7 +25,7 @@ public class Station {
     private Time depTime;
     private int dayNum;
 
-    @JsonBackReference
+    @JsonBackReference(value="shedule-station")
     @ManyToOne
     private Schedule schedule;
 

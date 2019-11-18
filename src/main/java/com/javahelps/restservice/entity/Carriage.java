@@ -3,16 +3,18 @@ package com.javahelps.restservice.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name="carriage", uniqueConstraints = @UniqueConstraint(columnNames = {"train_id", "carriage_id"}))
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
-public class Carriage implements Serializable {
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="carriage_id")
+public class Carriage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +26,7 @@ public class Carriage implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id",nullable = false)
+    @JsonBackReference(value="train-carriage")
     private Train train;
 
 
@@ -79,11 +82,11 @@ public class Carriage implements Serializable {
         this.type = type;
     }
 
-    public Set<Ticket> getTicket() {
+    public List<Ticket2> getTicket() {
         return ticket;
     }
 
-    public void setTicket(Set<Ticket> ticket) {
+    public void setTicket(List<Ticket2> ticket) {
         this.ticket = ticket;
     }
 
@@ -97,8 +100,9 @@ public class Carriage implements Serializable {
         this.seats = seats;
     }
 
-    @JsonManagedReference(value="carriage-get")
-    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
-            orphanRemoval = true,fetch = FetchType.EAGER)
-    private Set<Ticket> ticket=new HashSet<>(0);
+//    @JsonManagedReference(value="carriage-get-all")
+//    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
+//            orphanRemoval = true,fetch = FetchType.EAGER)
+    @ElementCollection(targetClass=Ticket2.class)
+    private List<Ticket2> ticket=new ArrayList<>(0);
 }

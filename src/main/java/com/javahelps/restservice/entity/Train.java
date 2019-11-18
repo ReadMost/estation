@@ -16,12 +16,13 @@ public class Train {
     private int id;
     private String number;
 
-    @JsonManagedReference
+    @JsonManagedReference(value="train-carriage")
     @OneToMany(mappedBy = "train",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Carriage> carriage=new HashSet<>(0);
 
-    @JsonManagedReference
+
+    @JsonManagedReference(value="train-schedule")
     @OneToMany(mappedBy = "train",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Schedule> schedules=new HashSet<>(0);
@@ -51,7 +52,7 @@ public class Train {
         this.id = id;
     }
 
-    @JsonManagedReference
+    @JsonManagedReference(value="train-get")
     @OneToMany(mappedBy = "train",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticket=new HashSet<>(0);

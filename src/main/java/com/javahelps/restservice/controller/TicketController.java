@@ -4,6 +4,7 @@ import com.javahelps.restservice.entity.*;
 import com.javahelps.restservice.repository.*;
 
 import com.javahelps.restservice.serializer.TicketSerializer;
+import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,6 +43,17 @@ public class TicketController {
         ticket.setStatus("booked");
 
         return tickerRepository.save(ticket);
+    }
+
+    @PutMapping(path = "/{id}",consumes = "application/json")
+    public Ticket update(@PathVariable("id") int id, @RequestBody Ticket t) throws BadHttpRequest {
+        if (tickerRepository.exists(id)) {
+            t.setId(id);
+            tickerRepository.save(t);
+            return tickerRepository.save(t);
+        } else {
+            throw new BadHttpRequest();
+        }
     }
 //
 //    @GetMapping("/stations")

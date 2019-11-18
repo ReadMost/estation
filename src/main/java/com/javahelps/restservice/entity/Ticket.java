@@ -8,10 +8,8 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
 
 @Entity
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
-//@JsonIgnoreProperties(ignoreUnknown = true,
-//        value = {"hibernateLazyInitializer", "handler", "created"})
-@JsonIgnoreProperties("user")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Ticket implements java.io.Serializable {
     public int getId() {
         return id;
