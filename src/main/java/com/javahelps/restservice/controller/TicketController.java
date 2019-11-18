@@ -45,12 +45,22 @@ public class TicketController {
         return tickerRepository.save(ticket);
     }
 
-    @PutMapping(path = "/{id}",consumes = "application/json")
-    public Ticket update(@PathVariable("id") int id, @RequestBody Ticket t) throws BadHttpRequest {
+    @PutMapping(path = "/{id}")
+    public Ticket update(@PathVariable("id") int id, @RequestBody TicketSerializer t) throws BadHttpRequest {
         if (tickerRepository.exists(id)) {
-            t.setId(id);
-            tickerRepository.save(t);
-            return tickerRepository.save(t);
+            System.out.println(t+"----------------");
+            Ticket ticket = tickerRepository.getOne(id);
+            ticket.setTrain(trainRepository.getOne(t.getTrain()));
+            ticket.setDocument_id(t.getDocumentId());
+            ticket.setlName(t.getLName());
+            ticket.setfName(t.getFName());
+            ticket.setCarriage(carriageRepository.getOne(t.getCarriage()));
+            ticket.setSeat(seatsRepository.getOne(t.getSeat()));
+            ticket.setFrom(stationRepository.getOne(t.getFrom()));
+            ticket.setTo(stationRepository.getOne(t.getTo()));
+            ticket.setPrice(t.getPrice());
+
+            return tickerRepository.save(ticket);
         } else {
             throw new BadHttpRequest();
         }
