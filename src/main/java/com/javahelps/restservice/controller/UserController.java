@@ -1,9 +1,15 @@
 package com.javahelps.restservice.controller;
 
 
+import com.javahelps.restservice.config.LogConfig;
+import com.javahelps.restservice.entity.Log;
 import com.javahelps.restservice.entity.Role;
+import com.javahelps.restservice.repository.LogRepository;
 import com.javahelps.restservice.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +19,7 @@ import com.javahelps.restservice.repository.UserRepository;
 import javassist.tools.web.BadHttpRequest;
 
 import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import java.util.Collection;
@@ -28,10 +35,14 @@ public class UserController {
     @Autowired
     private RoleRepository roleRepository;
 
+    @Autowired
+    private LogRepository logRepository;
+
 
 
     @GetMapping
     public Iterable<User> findAll() {
+        addLog("get all users' list", "GET");
         return repository.findAll();
     }
 
@@ -111,6 +122,24 @@ public class UserController {
             roleRepository.save(role);
         }
         return role;
+    }
+
+    public void addLog(String content, String requestType) {
+        if (!LogConfig.isEnabled) return;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean notAuthenticated = authentication instanceof AnonymousAuthenticationToken;
+        Log log = new Log();
+        if (!notAuthenticated) {
+            String username = ((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername();
+            User user = repository.findByEmail(username);
+            log.setUser_id(user.getId());
+        }
+        else
+            log.setUser_id(-1);
+        log.setContent_type(content);
+        log.setRequest_type(requestType);
+        log.setDateTime(LocalDateTime.now());
+        logRepository.save(log);
     }
 
 }
