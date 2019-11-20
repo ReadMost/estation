@@ -4,7 +4,12 @@ package com.javahelps.restservice.controller;
 import com.javahelps.restservice.entity.Role;
 import com.javahelps.restservice.repository.RoleRepository;
 import com.javahelps.restservice.serializer.UserSerializer;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +19,7 @@ import com.javahelps.restservice.repository.UserRepository;
 import javassist.tools.web.BadHttpRequest;
 
 import javax.transaction.Transactional;
+import java.security.Principal;
 import java.util.ArrayList;
 
 import java.util.Collection;
@@ -39,6 +45,11 @@ public class UserController {
     @GetMapping(path = "/{id}")
     public User find(@PathVariable("id") Long id) {
         return repository.findOne(id);
+    }
+
+    @GetMapping(path = "/user_info")
+    public User currentUserName(Principal principal) {
+        return repository.findByEmail(principal.getName());
     }
 
 
