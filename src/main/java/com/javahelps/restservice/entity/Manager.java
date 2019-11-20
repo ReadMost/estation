@@ -6,7 +6,7 @@ import java.util.*;
 import javax.persistence.*;
 
 @Entity
-public class Passenger {
+public class Manager {
     @Id
     @GeneratedValue
     private Long id;
@@ -14,27 +14,22 @@ public class Passenger {
     @Column(unique = true)
     private String phone;
 
-    public Passenger(String phone, User user) {
+    public Manager(String phone, User user) {
 
         this.phone = phone;
         this.user = user;
     }
 
-    public Passenger() {
+    public Manager() {
     }
 
     public User getUser() {
         return user;
     }
 
-//    public void setUser(User user) {
-//        this.user = user;
-//        this.user.addPassengers(this);
-//    }
-
     @Override
     public String toString() {
-        return "Passenger{" +
+        return "Manager{" +
                 "id=" + id +
                 ", phone='" + phone + '\'' +
                 '}';
@@ -49,13 +44,13 @@ public class Passenger {
         this.phone = phone;
     }
 
-
-
-
-
     @JsonIgnore
     @JsonManagedReference
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="user_id")
     private User user;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "station_id")
+    private Station station;
 }

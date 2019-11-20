@@ -1,25 +1,65 @@
 package com.javahelps.restservice.entity;
 
+import javax.persistence.*;
+
+@Entity
 public class Ticket {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private int price;
+
     private int document_id;
+
     private String lName;
+
     private String fName;
-    private int seat;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="carriage_id")
+    private Carriage carriage;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="user_id")
+    private User user;
+
+    public Ticket(int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price) {
+        this.document_id = document_id;
+        this.lName = lName;
+        this.fName = fName;
+        this.carriage = carriage;
+        this.seat = seat;
+        this.from = from;
+        this.to = to;
+        this.train = train;
+        this.user = user;
+        this.price = price;
+
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="seats_id")
+    private Seats seat;
+
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="from_station_id")
     private Station from;
+
+    @ManyToOne
+    @JoinColumn(name="to_station_id")
     private Station to;
-    private int trainId;
-    private int carriage;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="train_id")
+    private Train train;
+
     private String status;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getPrice() {
         return price;
@@ -49,47 +89,38 @@ public class Ticket {
         return fName;
     }
 
+    public Ticket() {
+    }
+
     public void setfName(String fName) {
         this.fName = fName;
     }
 
-    public int getSeat() {
-        return seat;
+    public void setCarriage(Carriage carriage) {
+        this.carriage = carriage;
     }
 
-    public void setSeat(int seat) {
+    public void setSeat(Seats seat) {
         this.seat = seat;
-    }
-
-    public Station getFrom() {
-        return from;
     }
 
     public void setFrom(Station from) {
         this.from = from;
     }
 
-    public Station getTo() {
-        return to;
-    }
-
     public void setTo(Station to) {
         this.to = to;
     }
 
-    public int getTrainId() {
-        return trainId;
+    public void setTrain(Train train) {
+        this.train = train;
     }
 
-    public void setTrainId(int trainId) {
-        this.trainId = trainId;
+    public String getStatus() {
+        return status;
     }
 
-    public int getCarriage() {
-        return carriage;
-    }
-
-    public void setCarriage(int carriage) {
-        this.carriage = carriage;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

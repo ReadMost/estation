@@ -13,7 +13,7 @@ public class Train {
     @Id
     @Column(name="train_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
     private String number;
 
     @JsonManagedReference
@@ -29,7 +29,7 @@ public class Train {
     public String getNumber() {
         return number;
     }
-    public Long getId() {
+    public int getId() {
         return id;
     }
     public Set<Schedule> getSchedules() {
@@ -47,8 +47,20 @@ public class Train {
     public void setCarriage(Set<Carriage> carriage) {
         this.carriage = carriage;
     }
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
+    @JsonManagedReference
+    @OneToMany(mappedBy = "train",cascade = CascadeType.ALL,
+            orphanRemoval = true,fetch = FetchType.EAGER)
+    private Set<Ticket> ticket=new HashSet<>(0);
+
+//    public Set<Ticket> getTicket() {
+//        return ticket;
+//    }
+
+    public void setTicket(Set<Ticket> ticket) {
+        this.ticket = ticket;
+    }
 }

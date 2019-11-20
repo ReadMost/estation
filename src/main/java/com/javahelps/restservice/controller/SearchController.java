@@ -1,6 +1,5 @@
 package com.javahelps.restservice.controller;
 
-import com.javahelps.restservice.entity.Carriage;
 import com.javahelps.restservice.entity.Schedule;
 import com.javahelps.restservice.entity.Station;
 import com.javahelps.restservice.entity.Train;

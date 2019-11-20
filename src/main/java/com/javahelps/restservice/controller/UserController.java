@@ -28,8 +28,6 @@ public class UserController {
     @Autowired
     private RoleRepository roleRepository;
 
-
-
     @GetMapping
     public Iterable<User> findAll() {
         return repository.findAll();
@@ -59,15 +57,12 @@ public class UserController {
         oldUser.setFirstName(newUser.getFirstName());
         oldUser.setLastName(newUser.getLastName());
         oldUser.setEmail(newUser.getEmail());
-
-
     }
 
     @PutMapping(path = "/{id}")
     public User update(@PathVariable("id") Long id, @RequestBody User user) throws BadHttpRequest {
         if (repository.exists(id)) {
             System.out.println(user.getFirstName());
-
             repository.updateUser(user.getFirstName(), user.getLastName(), id);
             User u = repository.findById(id);
             return u;
@@ -91,7 +86,6 @@ public class UserController {
 
     @Transactional
     User createUserIfNotFound(String fname, String lname, String password, String email) {
-
         User user = repository.findByEmail(email);
         if (user == null) {
             Collection<Role> roles = new  ArrayList<Role>();

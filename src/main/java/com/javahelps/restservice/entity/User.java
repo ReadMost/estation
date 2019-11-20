@@ -1,6 +1,7 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.javahelps.restservice.validators.EmailValidator;
 import com.javahelps.restservice.validators.ValidEmail;
 import org.hibernate.annotations.Fetch;
@@ -130,19 +131,30 @@ public class User {
                 '}';
     }
 
-    public void addPassengers(Passenger passengers) {
-        this.passengers.add(passengers);
+//    public void addPassengers(Passenger passengers) {
+//        this.passengers.add(passengers);
+//    }
+//
+//    public Set<Passenger> getPassengers() {
+//        return passengers;
+//    }
+
+//    @JsonBackReference
+//    @Fetch(FetchMode.JOIN)
+//    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
+//    @Value("${some.key:}")
+//    private Set<Passenger> passengers;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,
+            orphanRemoval = true,fetch = FetchType.EAGER)
+    private Set<Ticket> ticket=new HashSet<>(0);
+
+    public Set<Ticket> getTicket() {
+        return ticket;
     }
 
-    public Set<Passenger> getPassengers() {
-        return passengers;
+    public void setTicket(Set<Ticket> ticket) {
+        this.ticket = ticket;
     }
-
-    @JsonBackReference
-    @Fetch(FetchMode.JOIN)
-    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
-    @Value("${some.key:}")
-    private Set<Passenger> passengers;
-
-
 }

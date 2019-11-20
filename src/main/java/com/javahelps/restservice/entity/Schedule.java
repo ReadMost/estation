@@ -2,6 +2,7 @@ package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Collections;
@@ -47,5 +48,18 @@ public class Schedule {
         this.stations = station;
     }
 
+    @Transactional
+    public void  deleteStation(String name){
+        for(Station station:stations){
+            if(station.getName().equals(name)){
+               stations.remove(station);
+                break;
+            }
+        }
+    }
+    @Transactional
+    public void set(Station station){
+        stations.add(station);
+    }
 
 }
