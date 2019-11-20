@@ -65,11 +65,33 @@ public class TicketController {
             throw new BadHttpRequest();
         }
     }
+
+    @DeleteMapping(path = "/{id}")
+    public void delete(@PathVariable("id") int id) {
+        tickerRepository.delete(id);
+    }
+
+    @GetMapping(path = "/{id}")
+    public Ticket find(@PathVariable("id") int id) {
+        return tickerRepository.findOne(id);
+    }
+
+    @PutMapping(path = "cancel/{id}")
+    public Ticket cancel(@PathVariable("id") int id) throws BadHttpRequest {
+        if (tickerRepository.exists(id)) {
+           Ticket t = tickerRepository.findOne(id);
+           t.setStatus("canceled");
+            return tickerRepository.save(t);
+        } else {
+            throw new BadHttpRequest();
+        }
+    }
+
 //
 //    @GetMapping("/stations")
 //    public Iterable<Station> findAllStations() {
 //        return stationRepository.findAll();
-//    }
+//
 //
 //    @GetMapping("/schedules")
 //    public Iterable<Schedule> findAllSchedules() {

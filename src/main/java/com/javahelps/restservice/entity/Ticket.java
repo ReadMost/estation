@@ -1,9 +1,6 @@
 package com.javahelps.restservice.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
 
@@ -20,19 +17,58 @@ public class Ticket implements java.io.Serializable {
     }
 
 
-    public Seats getSeat() {
-        return seat;
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", price=" + price +
+                ", document_id=" + document_id +
+                ", lName='" + lName + '\'' +
+                ", fName='" + fName + '\'' +
+                ", carriage=" + carriage +
+                ", user=" + user +
+                ", seat=" + seat +
+                ", from=" + from +
+                ", to=" + to +
+                ", train=" + train +
+                ", status='" + status + '\'' +
+                '}';
     }
-
+    @JsonIgnore
+    public int getSeat() {
+        return seat.getId();
+    }
+    public int getSeat_number(){
+        return seat.getNumber();
+    }
+    @JsonIgnore
     public Station getFrom() {
         return from;
     }
 
+    public int getFrom_id(){
+        return from.getId();
+    }
+    public String getFrom_name(){
+        return from.getName();
+
+    }
+
+    @JsonIgnore
     public Station getTo() {
         return to;
     }
 
-    @Id
+    public int getTo_id(){
+        return to.getId();
+    }
+    public String getTo_name(){
+        return to.getName();
+
+    }
+
+
+        @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
@@ -47,6 +83,7 @@ public class Ticket implements java.io.Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="carriage_id")
     @JsonBackReference(value="carriage-get")
+//    @JsonIdentityReference(alwaysAsId = true)
     private Carriage carriage;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -71,6 +108,7 @@ public class Ticket implements java.io.Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="seats_id")
     @JsonBackReference(value="seat-get")
+    @JsonIdentityReference(alwaysAsId = true)
     private Seats seat;
 
 
@@ -81,30 +119,47 @@ public class Ticket implements java.io.Serializable {
     @ManyToOne
     @JoinColumn(name="from_station_id")
     @JsonBackReference(value="from-get")
+    @JsonIdentityReference(alwaysAsId = true)
     private Station from;
 
     @ManyToOne
     @JoinColumn(name="to_station_id")
     @JsonBackReference(value="to-get")
+    @JsonIdentityReference(alwaysAsId = true)
     private Station to;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id")
     @JsonBackReference(value="train-get")
+    @JsonIdentityReference(alwaysAsId = true)
     private Train train;
 
     private String status;
 
+    @JsonIgnore
     public Carriage getCarriage() {
         return carriage;
+    }
+
+    public int getCarriage_id(){
+        return carriage.getId();
+    }
+    public int getCarriage_number(){
+        return carriage.getNumber();
     }
 
     public User getUser() {
         return user;
     }
-
+    @JsonIgnore
     public Train getTrain() {
         return train;
+    }
+    public int getTrain_id(){
+        return train.getId();
+    }
+    public String getTrain_number(){
+        return train.getNumber();
     }
 
     public int getPrice() {

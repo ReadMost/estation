@@ -1,5 +1,6 @@
 package com.javahelps.restservice.repository;
 
+import com.javahelps.restservice.entity.Station;
 import com.javahelps.restservice.entity.Ticket;
 import com.javahelps.restservice.entity.Ticket2;
 import org.springframework.data.jpa.repository.JpaRepository;
