@@ -14,6 +14,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
         <property name="serverTimezone" value="UTC" />
+        <property name="timeZone" value="UTC" />
       </driver-properties>
       <time-zone>UTC</time-zone>
     </data-source>

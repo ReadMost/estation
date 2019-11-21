@@ -51,7 +51,6 @@ public class Train {
     public void setId(int id) {
         this.id = id;
     }
-
     @JsonManagedReference(value="train-get")
     @OneToMany(mappedBy = "train",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)

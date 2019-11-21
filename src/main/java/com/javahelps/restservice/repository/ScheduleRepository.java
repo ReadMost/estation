@@ -11,6 +11,8 @@ import java.util.Set;
 
 
 @RestResource(exported = false)
-public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
+public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
     Set<Schedule> findScheduleByType_Id(@Param("t") int t);
+
+
 }

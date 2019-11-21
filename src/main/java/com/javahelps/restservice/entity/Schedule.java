@@ -1,9 +1,7 @@
 package com.javahelps.restservice.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Collections;
@@ -30,8 +28,9 @@ public class Schedule {
 
 
 
-    @JsonManagedReference(value="shedule-station")
-    @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL,
+
+    @JsonManagedReference(value="schedule-station")
+    @OneToMany(mappedBy = "schedule", cascade = CascadeType.MERGE,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Station> stations=new HashSet<>(0);
 
@@ -52,5 +51,34 @@ public class Schedule {
         this.stations = station;
     }
 
+
+    @Transactional
+    public void deleteStation(String name){
+        for(Station station:stations){
+         if(station.getMainStation().getName().equals(name)){
+             System.out.println(station.getMainStation().getName());
+             stations.remove(station);
+
+             break;
+         }
+        }
+    }
+
+
+    @Transactional
+    public void set(Station station){
+        this.stations.add(station);
+    }
+
+    @Transactional
+    public Station getStationByName(String name){
+        for(Station station:stations){
+            if(station.getMainStation().getName().equals(name)){
+                System.out.println(station);
+                return station;
+            }
+        }
+        return null;
+    }
 
 }
