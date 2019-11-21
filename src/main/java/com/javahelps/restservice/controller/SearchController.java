@@ -24,6 +24,8 @@ public class SearchController {
     @Autowired
     private StationRepository stationRepository;
     @Autowired
+    private MainStationRepository mainStationRepository;
+    @Autowired
     private TrainRepository trainRepository;
     @Autowired
     private SeatsRepository seatsRepository;
@@ -43,6 +45,12 @@ public class SearchController {
     @GetMapping("/stations")
     public Iterable<Station> findAllStations() {
         return stationRepository.findAll();
+    }
+
+
+    @GetMapping("/mainStations")
+    public Iterable<MainStation> findAllMainStations() {
+        return mainStationRepository.findAll();
     }
 
     @GetMapping("/schedules")
