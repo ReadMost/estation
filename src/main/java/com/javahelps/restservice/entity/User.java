@@ -1,7 +1,9 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.javahelps.restservice.validators.EmailValidator;
 import com.javahelps.restservice.validators.ValidEmail;
 import org.hibernate.annotations.Fetch;
@@ -20,6 +22,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
 public class User {
 
     @Id
@@ -56,8 +59,6 @@ public class User {
         this.password = password;
 
     }
-
-
 
     public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
         this.firstName = firstName;
@@ -145,16 +146,20 @@ public class User {
 //    @Value("${some.key:}")
 //    private Set<Passenger> passengers;
 
-    @JsonManagedReference
+    @JsonManagedReference(value="user-get")
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticket=new HashSet<>(0);
 
+//    @JsonManagedReference(value="user-movement-get")
     public Set<Ticket> getTicket() {
         return ticket;
     }
 
+//    @JsonManagedReference(value="user-movement-set")
     public void setTicket(Set<Ticket> ticket) {
         this.ticket = ticket;
     }
+
+
 }

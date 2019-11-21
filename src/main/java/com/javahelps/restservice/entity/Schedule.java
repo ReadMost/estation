@@ -1,8 +1,10 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.transaction.annotation.Transactional;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.util.Collections;
@@ -11,17 +13,18 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 @Entity
 @Table(name="schedule")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
 public class Schedule {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @JsonBackReference
+    @JsonBackReference(value="train-schedule")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="train_id", nullable = false)
     private Train train;
 
-    @JsonBackReference
+    @JsonBackReference(value="type-schedule")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="type_id", nullable = false)
     private Type type;
@@ -34,16 +37,21 @@ public class Schedule {
     public int getId() {
         return id;
     }
+
     public Set<Station> getStations() {   return stations;   }
+
     public void setTrain(Train train) {
         this.train = train;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public void setType(Type type) {
         this.type = type;
     }
+
     public void setStation(Set<Station> station) {
         this.stations = station;
     }
@@ -51,7 +59,7 @@ public class Schedule {
     @Transactional
     public void  deleteStation(String name){
         for(Station station:stations){
-            if(station.getName().equals(name)){
+            if(station.getMainStation().getName().equals(name)){
                stations.remove(station);
                 break;
             }

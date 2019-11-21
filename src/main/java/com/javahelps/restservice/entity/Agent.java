@@ -9,14 +9,6 @@ import java.sql.Time;
 @Table(name="agent")
 public class Agent {
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -67,13 +59,14 @@ public class Agent {
         this.workedTill = workedTill;
     }
 
-    public void setStation(Station station) {
-        this.station = station;
-    }
+    public int getId() {  return id; }
 
-    @JsonBackReference
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="station_id", nullable = false)
-    private Station station;
+    public void setId(int id) { this.id = id; }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
+
 
 }

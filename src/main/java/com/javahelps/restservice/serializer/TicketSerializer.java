@@ -1,6 +1,9 @@
 package com.javahelps.restservice.serializer;
 
 
+import java.sql.Date;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -9,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -41,6 +45,8 @@ public class TicketSerializer {
     private Integer from;
     @JsonProperty("to")
     private Integer to;
+    @JsonProperty("date")
+    private Date date;
     @JsonProperty("train")
     private Integer train;
     @JsonProperty("price")
@@ -143,6 +149,14 @@ public class TicketSerializer {
         return price;
     }
 
+    @JsonProperty("date")
+    public Date getDate() { return date; }
+
+    @JsonProperty("date")
+    public void setDate(Date date) {
+        this.date=date;
+    }
+
     @JsonProperty("price")
     public void setPrice(Integer price) {
         this.price = price;
@@ -158,4 +172,7 @@ public class TicketSerializer {
         this.additionalProperties.put(name, value);
     }
 
+//    public Ticket createTicket((int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price){
+//
+//    }
 }
