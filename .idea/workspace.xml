@@ -9,9 +9,12 @@
     <list default="true" id="a42b87f2-0bb1-4a99-9b1a-11d2439a0d02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/repository/TrainRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/repository/TrainRepository.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,86 +78,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="83" column="44" lean-forward="true" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#2541#2542#0" expanded="true" />
-                <element signature="e#2578#2579#0" expanded="true" />
-                <element signature="e#2664#2665#0" expanded="true" />
-                <element signature="e#2715#2716#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="42" />
+            <state relative-caret-position="122">
+              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2050#2051#0" expanded="true" />
-                <element signature="e#2079#2080#0" expanded="true" />
-                <element signature="e#2129#2130#0" expanded="true" />
-                <element signature="e#2165#2166#0" expanded="true" />
-                <element signature="e#2203#2204#0" expanded="true" />
-                <element signature="e#2231#2232#0" expanded="true" />
-                <element signature="e#2277#2278#0" expanded="true" />
-                <element signature="e#2311#2312#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-502">
-              <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
-              <folding>
-                <element signature="e#2253#2254#0" expanded="true" />
-                <element signature="e#2278#2279#0" expanded="true" />
-                <element signature="e#2312#2313#0" expanded="true" />
-                <element signature="e#2340#2341#0" expanded="true" />
-                <element signature="e#2376#2377#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
-                <element signature="e#2458#2459#0" expanded="true" />
-                <element signature="e#2500#2501#0" expanded="true" />
-                <element signature="e#2535#2536#0" expanded="true" />
-                <element signature="e#2566#2567#0" expanded="true" />
-                <element signature="e#2614#2615#0" expanded="true" />
-                <element signature="e#2654#2655#0" expanded="true" />
-                <element signature="e#2686#2687#0" expanded="true" />
-                <element signature="e#2714#2715#0" expanded="true" />
-                <element signature="e#2756#2757#0" expanded="true" />
-                <element signature="e#2790#2791#0" expanded="true" />
-                <element signature="e#2825#2826#0" expanded="true" />
-                <element signature="e#2856#2857#0" expanded="true" />
-                <element signature="e#2904#2905#0" expanded="true" />
-                <element signature="e#2944#2945#0" expanded="true" />
-                <element signature="e#2986#2987#0" expanded="true" />
-                <element signature="e#3014#3015#0" expanded="true" />
-                <element signature="e#4226#4227#0" expanded="true" />
-                <element signature="e#4255#4256#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,57 +93,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+            <state relative-caret-position="24">
+              <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1034#1035#0" expanded="true" />
                 <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1171#1172#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#1194#1195#0" expanded="true" />
-                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#2763#2764#0" expanded="true" />
                 <element signature="e#2795#2796#0" expanded="true" />
+                <element signature="e#3395#3396#0" expanded="true" />
                 <element signature="e#3426#3427#0" expanded="true" />
-                <element signature="e#3464#3465#0" expanded="true" />
-                <element signature="e#3494#3495#0" expanded="true" />
-                <element signature="e#3532#3533#0" expanded="true" />
-                <element signature="e#3571#3572#0" expanded="true" />
+                <element signature="e#3608#3609#0" expanded="true" />
                 <element signature="e#3635#3636#0" expanded="true" />
+                <element signature="e#3681#3682#0" expanded="true" />
                 <element signature="e#3709#3710#0" expanded="true" />
-                <element signature="e#3750#3751#0" expanded="true" />
-                <element signature="e#3789#3790#0" expanded="true" />
-                <element signature="e#3826#3827#0" expanded="true" />
-                <element signature="e#3869#3870#0" expanded="true" />
+                <element signature="e#3881#3882#0" expanded="true" />
                 <element signature="e#3909#3910#0" expanded="true" />
+                <element signature="e#3948#3949#0" expanded="true" />
                 <element signature="e#3982#3983#0" expanded="true" />
+                <element signature="e#4017#4018#0" expanded="true" />
                 <element signature="e#4051#4052#0" expanded="true" />
+                <element signature="e#4102#4103#0" expanded="true" />
                 <element signature="e#4148#4149#0" expanded="true" />
+                <element signature="e#4180#4181#0" expanded="true" />
                 <element signature="e#4208#4209#0" expanded="true" />
+                <element signature="e#4250#4251#0" expanded="true" />
                 <element signature="e#4284#4285#0" expanded="true" />
+                <element signature="e#4316#4317#0" expanded="true" />
                 <element signature="e#4344#4345#0" expanded="true" />
+                <element signature="e#4415#4416#0" expanded="true" />
                 <element signature="e#4449#4450#0" expanded="true" />
+                <element signature="e#4501#4502#0" expanded="true" />
                 <element signature="e#4541#4542#0" expanded="true" />
+                <element signature="e#4582#4583#0" expanded="true" />
                 <element signature="e#4614#4615#0" expanded="true" />
+                <element signature="e#4657#4658#0" expanded="true" />
                 <element signature="e#4689#4690#0" expanded="true" />
+                <element signature="e#4728#4729#0" expanded="true" />
                 <element signature="e#4756#4757#0" expanded="true" />
+                <element signature="e#4799#4800#0" expanded="true" />
                 <element signature="e#4833#4834#0" expanded="true" />
+                <element signature="e#4866#4867#0" expanded="true" />
                 <element signature="e#4895#4896#0" expanded="true" />
+                <element signature="e#4939#4940#0" expanded="true" />
                 <element signature="e#4975#4976#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/TicketSerializer.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="161" column="19" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="19" />
+            <state relative-caret-position="-14">
+              <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#2664#2665#0" expanded="true" />
+                <element signature="e#2715#2716#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,10 +180,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/StationRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+            <state relative-caret-position="225">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="24" column="359" selection-start-line="24" selection-start-column="359" selection-end-line="24" selection-end-column="359" />
             </state>
           </provider>
         </entry>
@@ -233,7 +200,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="90">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -329,7 +296,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/CarriageRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/SeatsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/StationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/Run.java" />
@@ -337,9 +303,7 @@
         <option value="$PROJECT_DIR$/src/test/resources/data.sql" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/RepositoryConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/UserSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -348,9 +312,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Train.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Schedule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Type.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java" />
       </list>
@@ -383,7 +350,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -495,6 +461,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -700,7 +667,8 @@
       <workItem from="1574000386602" duration="8446000" />
       <workItem from="1574055809322" duration="40000" />
       <workItem from="1574084909618" duration="17558000" />
-      <workItem from="1574240490953" duration="2337000" />
+      <workItem from="1574240490953" duration="4048000" />
+      <workItem from="1574339141687" duration="1220000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1571152523608</created>
@@ -772,17 +740,31 @@
       <option name="project" value="LOCAL" />
       <updated>1574107402608</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding canelation">
+      <created>1574243541311</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1574243541311</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adding user info">
+      <created>1574247299721</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574247299721</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37073000" />
+    <option name="totallyTimeSpent" value="40004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -793,7 +775,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -904,7 +886,9 @@
     <MESSAGE value="addiing user serialzier" />
     <MESSAGE value="resolve conflict" />
     <MESSAGE value="adding update" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding update" />
+    <MESSAGE value="adding canelation" />
+    <MESSAGE value="adding user info" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding user info" />
   </component>
   <component name="editorHistoryManager">
     <entry file="uml://MODULES/mdl-estation">
@@ -1479,24 +1463,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/PassengerRepository.java" />
     <entry file="file://$PROJECT_DIR$/out/artifacts/EStation_war_exploded/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -1544,31 +1511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1614,34 +1560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/StationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/SeatsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/ScheduleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="73" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1673,30 +1595,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="660">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
-          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+        <state relative-caret-position="1770">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
           <folding>
             <element signature="e#2253#2254#0" expanded="true" />
             <element signature="e#2278#2279#0" expanded="true" />
@@ -1726,48 +1635,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="359" selection-start-line="24" selection-start-column="359" selection-end-line="24" selection-end-column="359" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/SeatsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/ScheduleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="73" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+        <state relative-caret-position="24">
+          <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1034#1035#0" expanded="true" />
             <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
             <element signature="e#2795#2796#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
             <element signature="e#3426#3427#0" expanded="true" />
-            <element signature="e#3464#3465#0" expanded="true" />
-            <element signature="e#3494#3495#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
-            <element signature="e#3571#3572#0" expanded="true" />
+            <element signature="e#3608#3609#0" expanded="true" />
             <element signature="e#3635#3636#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
             <element signature="e#3709#3710#0" expanded="true" />
-            <element signature="e#3750#3751#0" expanded="true" />
-            <element signature="e#3789#3790#0" expanded="true" />
-            <element signature="e#3826#3827#0" expanded="true" />
-            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3881#3882#0" expanded="true" />
             <element signature="e#3909#3910#0" expanded="true" />
+            <element signature="e#3948#3949#0" expanded="true" />
             <element signature="e#3982#3983#0" expanded="true" />
+            <element signature="e#4017#4018#0" expanded="true" />
             <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
             <element signature="e#4148#4149#0" expanded="true" />
+            <element signature="e#4180#4181#0" expanded="true" />
             <element signature="e#4208#4209#0" expanded="true" />
+            <element signature="e#4250#4251#0" expanded="true" />
             <element signature="e#4284#4285#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
             <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4415#4416#0" expanded="true" />
             <element signature="e#4449#4450#0" expanded="true" />
+            <element signature="e#4501#4502#0" expanded="true" />
             <element signature="e#4541#4542#0" expanded="true" />
+            <element signature="e#4582#4583#0" expanded="true" />
             <element signature="e#4614#4615#0" expanded="true" />
+            <element signature="e#4657#4658#0" expanded="true" />
             <element signature="e#4689#4690#0" expanded="true" />
+            <element signature="e#4728#4729#0" expanded="true" />
             <element signature="e#4756#4757#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
             <element signature="e#4833#4834#0" expanded="true" />
+            <element signature="e#4866#4867#0" expanded="true" />
             <element signature="e#4895#4896#0" expanded="true" />
+            <element signature="e#4939#4940#0" expanded="true" />
             <element signature="e#4975#4976#0" expanded="true" />
           </folding>
         </state>
@@ -1775,14 +1762,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="83" column="44" lean-forward="true" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
+        <state relative-caret-position="-14">
+          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#888#889#0" expanded="true" />
             <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#2578#2579#0" expanded="true" />
             <element signature="e#2664#2665#0" expanded="true" />
             <element signature="e#2715#2716#0" expanded="true" />
           </folding>

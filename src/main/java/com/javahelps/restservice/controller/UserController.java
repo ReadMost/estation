@@ -35,7 +35,7 @@ public class UserController {
     @Autowired
     private RoleRepository roleRepository;
 
-
+    
 
     @GetMapping
     public Iterable<User> findAll() {

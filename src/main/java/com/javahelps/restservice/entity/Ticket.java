@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"seats_id", "carriage_id", "user_id", "train_id"}))
 public class Ticket implements java.io.Serializable {
     public int getId() {
         return id;

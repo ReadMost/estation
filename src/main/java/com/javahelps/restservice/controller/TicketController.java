@@ -68,7 +68,8 @@ public class TicketController {
 
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable("id") int id) {
-        tickerRepository.delete(id);
+        Ticket ticket = tickerRepository.getOne(id);
+        tickerRepository.delete(ticket);
     }
 
     @GetMapping(path = "/{id}")
