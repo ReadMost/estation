@@ -15,11 +15,13 @@ import java.util.List;
 public class TicketController {
     @Autowired
     private TickerRepository tickerRepository;
+
     @Autowired
     private StationRepository stationRepository;
 
     @Autowired
     private TrainRepository trainRepository;
+
     @Autowired
     private UserRepository userRepository;
 
@@ -38,7 +40,7 @@ public class TicketController {
     public Ticket create(@RequestBody TicketSerializer t) {
         Ticket ticket = new Ticket(t.getDocumentId(), t.getLName(), t.getFName(), carriageRepository.getOne(t.getCarriage()),
                 seatsRepository.getOne(t.getSeat()), stationRepository.getOne(t.getFrom()), stationRepository.getOne(t.getTo()),
-                trainRepository.getOne(t.getTrain()), userRepository.getOne(t.getUser()), t.getPrice()
+                trainRepository.getOne(t.getTrain()), userRepository.getOne(t.getUser()), t.getPrice(), t.getDate()
         );
         ticket.setStatus("booked");
 

@@ -1,6 +1,9 @@
 package com.javahelps.restservice.serializer;
 
 
+import java.sql.Date;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -42,6 +45,8 @@ public class TicketSerializer {
     private Integer from;
     @JsonProperty("to")
     private Integer to;
+    @JsonProperty("date")
+    private Date date;
     @JsonProperty("train")
     private Integer train;
     @JsonProperty("price")
@@ -142,6 +147,14 @@ public class TicketSerializer {
     @JsonProperty("price")
     public Integer getPrice() {
         return price;
+    }
+
+    @JsonProperty("date")
+    public Date getDate() { return date; }
+
+    @JsonProperty("date")
+    public void setDate(Date date) {
+        this.date=date;
     }
 
     @JsonProperty("price")

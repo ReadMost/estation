@@ -82,11 +82,11 @@ public class Carriage {
         this.type = type;
     }
 
-    public List<Ticket> getTicket() {
+    public Set<Ticket> getTicket() {
         return ticket;
     }
 
-    public void setTicket(List<Ticket> ticket) {
+    public void setTicket(Set<Ticket> ticket) {
         this.ticket = ticket;
     }
 
@@ -100,9 +100,9 @@ public class Carriage {
         this.seats = seats;
     }
 
-//    @JsonManagedReference(value="carriage-get-all")
-//    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
-//            orphanRemoval = true,fetch = FetchType.EAGER)
-    @ElementCollection(targetClass=Ticket.class)
-    private List<Ticket> ticket=new ArrayList<>(0);
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
+            orphanRemoval = true,fetch = FetchType.EAGER)
+    private Set<Ticket> ticket=new HashSet<>(0);
 }

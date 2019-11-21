@@ -1,8 +1,12 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.*;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
@@ -50,10 +54,11 @@ public class Ticket implements java.io.Serializable {
     public int getFrom_id(){
         return from.getId();
     }
-    public String getFrom_name(){
-        return from.getName();
 
-    }
+//    public String getFrom_name(){
+//        return from.getName();
+//
+//    }
 
     @JsonIgnore
     public Station getTo() {
@@ -63,10 +68,11 @@ public class Ticket implements java.io.Serializable {
     public int getTo_id(){
         return to.getId();
     }
-    public String getTo_name(){
-        return to.getName();
 
-    }
+//    public String getTo_name(){
+//        return to.getName();
+//
+//    }
 
 
         @Id
@@ -81,18 +87,11 @@ public class Ticket implements java.io.Serializable {
 
     private String fName;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="carriage_id")
-    @JsonBackReference(value="carriage-get")
-//    @JsonIdentityReference(alwaysAsId = true)
-    private Carriage carriage;
+    private Date date;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="user_id")
-    @JsonBackReference(value="user-get")
-    private User user;
+    public Ticket() { }
 
-    public Ticket(int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price) {
+    public Ticket(int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price, Date date) {
         this.document_id = document_id;
         this.lName = lName;
         this.fName = fName;
@@ -103,7 +102,7 @@ public class Ticket implements java.io.Serializable {
         this.train = train;
         this.user = user;
         this.price = price;
-
+        this.date=date;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -112,10 +111,15 @@ public class Ticket implements java.io.Serializable {
     @JsonIdentityReference(alwaysAsId = true)
     private Seats seat;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="carriage_id")
+    @JsonBackReference(value="carriage-get")
+    private Carriage carriage;
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="user_id")
+    @JsonBackReference(value="user-get")
+    private User user;
 
     @ManyToOne
     @JoinColumn(name="from_station_id")
@@ -191,38 +195,25 @@ public class Ticket implements java.io.Serializable {
         return fName;
     }
 
-    public Ticket() {
-    }
-
     public void setfName(String fName) {
         this.fName = fName;
     }
-
-
 
     public void setCarriage(Carriage carriage) {
         this.carriage = carriage;
     }
 
-
-
     public void setSeat(Seats seat) {
         this.seat = seat;
     }
-
-
 
     public void setFrom(Station from) {
         this.from = from;
     }
 
-
-
     public void setTo(Station to) {
         this.to = to;
     }
-
-
 
     public void setTrain(Train train) {
         this.train = train;
@@ -235,4 +226,13 @@ public class Ticket implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public Date getDate() {  return date;  }
+
+    public void setDate(Date date) {   this.date = date;    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }

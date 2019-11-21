@@ -21,7 +21,7 @@ public class Seats implements Serializable {
     private Carriage carriage;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="seat_id")
     private int id;
 
@@ -47,9 +47,9 @@ public class Seats implements Serializable {
     }
 
 
-    public Set<Ticket> getTicket() {
-        return ticket;
-    }
+//    public Set<Ticket> getTicket() {
+//        return ticket;
+//    }
 
     public void setTicket(Set<Ticket> ticket) {
         this.ticket = ticket;
