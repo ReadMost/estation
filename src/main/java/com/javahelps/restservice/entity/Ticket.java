@@ -6,12 +6,13 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"seats_id", "carriage_id", "user_id", "train_id"}))
+//@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"seats_id", "carriage_id", "user_id", "train_id"}))
 public class Ticket implements java.io.Serializable {
     public int getId() {
         return id;
@@ -46,6 +47,7 @@ public class Ticket implements java.io.Serializable {
     public int getSeat_number(){
         return seat.getNumber();
     }
+
     @JsonIgnore
     public Station getFrom() {
         return from;
@@ -53,6 +55,10 @@ public class Ticket implements java.io.Serializable {
 
     public int getFrom_id(){
         return from.getId();
+    }
+
+    public String getFrom_name() {
+        return from.getMainStation_name();
     }
 
 //    public String getFrom_name(){
@@ -67,6 +73,10 @@ public class Ticket implements java.io.Serializable {
 
     public int getTo_id(){
         return to.getId();
+    }
+
+    public String getTo_name() {
+        return to.getMainStation_name();
     }
 
 //    public String getTo_name(){
@@ -228,6 +238,8 @@ public class Ticket implements java.io.Serializable {
     }
 
     public Date getDate() {  return date;  }
+
+    public String getTicket_date() {  return new SimpleDateFormat("dd-MM-yyyy").format(date);  }
 
     public void setDate(Date date) {   this.date = date;    }
 

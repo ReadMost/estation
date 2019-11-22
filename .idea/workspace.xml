@@ -7,8 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42b87f2-0bb1-4a99-9b1a-11d2439a0d02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/MainStationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/models/TrainCarriage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/models/TrainCarriage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/entity/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/models/TrainCarriage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javahelps/restservice/models/TrainCarriage.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,11 +82,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TicketController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+            <state relative-caret-position="134">
+              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,51 +106,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="TicketSerializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/TicketSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="1263">
+              <caret line="154" column="23" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="23" />
               <folding>
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#668#921#0" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ticket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="241" column="70" selection-start-line="241" selection-start-column="70" selection-end-line="241" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1629#1630#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#2006#2007#0" expanded="true" />
+                <element signature="e#2055#2056#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrainRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="54" column="69" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+            <state relative-caret-position="176">
+              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,24 +169,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eStation_back--old/src/main/java/com/javahelps/restservice/Application.java">
+      <file leaf-file-name="Station.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="e#668#921#0" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="86">
+              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <file leaf-file-name="TrainCarriage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/models/TrainCarriage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="270">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -171,8 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>station</find>
-      <find>station_id</find>
       <find>UPDATE</find>
       <find>arr</find>
       <find>act</find>
@@ -201,6 +227,8 @@
       <find>Ticket2</find>
       <find>Collection</find>
       <find>MainStationRepository</find>
+      <find>from</find>
+      <find>date</find>
     </findStrings>
     <replaceStrings>
       <replace>Long</replace>
@@ -243,17 +271,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Carriage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/../eStation_back--old/src/main/java/com/javahelps/restservice/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/MainStationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/models/TrainCarriage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -336,6 +365,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eStation_back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eStation_back" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restservice" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,6 +384,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restservice" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eStation_back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eStation_back" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restservice" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eStation_back" type="b2602c69:ProjectViewProjectNode" />
@@ -656,7 +703,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41134000" />
+    <option name="totallyTimeSpent" value="45247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="821" extended-state="6" />
@@ -673,18 +720,18 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39917126" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32872927" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2845304" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32872927" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.2845304" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32872927" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26251787" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -804,403 +851,12 @@
     <MESSAGE value="adding user info" />
     <option name="LAST_COMMIT_MESSAGE" value="adding user info" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/com.javahelps.restservice">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.javahelps.restservice</OriginalElement>
-          <nodes>
-            <node x="" y="">com.javahelps.restservice.repository</node>
-            <node x="" y="">com.javahelps.restservice.Application</node>
-            <node x="" y="">com.javahelps.restservice.config</node>
-            <node x="" y="">com.javahelps.restservice.entity</node>
-            <node x="" y="">com.javahelps.restservice.validators</node>
-            <node x="" y="">com.javahelps.restservice.serializer</node>
-            <node x="" y="">com.javahelps.restservice.service</node>
-            <node x="" y="">com.javahelps.restservice.controller</node>
-            <node x="" y="">com.javahelps.restservice.Run</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="179.0" y="155.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.javahelps.restservice.entity.Day">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.javahelps.restservice.entity.Day</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">javax.persistence.Entity</node>
-            <node x="108.0" y="0.0">javax.persistence.Table</node>
-            <node x="62.75" y="76.0">com.javahelps.restservice.entity.Day</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.javahelps.restservice.entity.Day" target="javax.persistence.Entity">
-              <point x="-16.75" y="-13.0" />
-              <point x="79.5" y="51.0" />
-              <point x="44.0" y="51.0" />
-              <point x="0.0" y="13.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Day" target="javax.persistence.Table">
-              <point x="16.75" y="-13.0" />
-              <point x="113.0" y="51.0" />
-              <point x="148.5" y="51.0" />
-              <point x="0.0" y="13.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-185.0" y="72.0" />
-          <SelectedNodes>
-            <node>com.javahelps.restservice.entity.Day</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.javahelps.restservice.entity.Carriage">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.javahelps.restservice.entity.Carriage</OriginalElement>
-          <nodes>
-            <node x="" y="">javax.persistence.Entity</node>
-            <node x="" y="">com.javahelps.restservice.entity.User</node>
-            <node x="" y="">com.javahelps.restservice.entity.Day</node>
-            <node x="" y="">com.javahelps.restservice.entity.Train</node>
-            <node x="" y="">java.io.Serializable</node>
-            <node x="" y="">javax.persistence.Table</node>
-            <node x="" y="">com.javahelps.restservice.entity.Station</node>
-            <node x="" y="">com.javahelps.restservice.entity.Passenger</node>
-            <node x="" y="">com.javahelps.restservice.entity.Type</node>
-            <node x="" y="">com.javahelps.restservice.entity.Carriage</node>
-            <node x="" y="">com.javahelps.restservice.entity.Ticket</node>
-            <node x="" y="">com.javahelps.restservice.entity.Role</node>
-            <node x="" y="">com.javahelps.restservice.entity.Seats</node>
-            <node x="" y="">com.javahelps.restservice.entity.Schedule</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8591664313168165" x="883.0" y="362.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram//Users/rauan/Desktop/fall_2019/se_lab/estation/src/main/java/com/javahelps/restservice/entity">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="520.0" y="220.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.javahelps.restservice.entity">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.javahelps.restservice.entity</OriginalElement>
-          <nodes>
-            <node x="404.47708333333327" y="1326.0">com.javahelps.restservice.entity.Station</node>
-            <node x="250.49999999999997" y="213.5">com.javahelps.restservice.entity.Passenger</node>
-            <node x="507.73518465181775" y="204.0">com.javahelps.restservice.entity.Carriage</node>
-            <node x="762.6409002176138" y="1381.0">com.javahelps.restservice.entity.Type</node>
-            <node x="218.4705085125448" y="952.0">com.javahelps.restservice.entity.Ticket</node>
-            <node x="105.47268465181776" y="496.0">com.javahelps.restservice.entity.User</node>
-            <node x="63.5" y="236.0">com.javahelps.restservice.entity.Role</node>
-            <node x="767.2659002176138" y="1062.5">com.javahelps.restservice.entity.Day</node>
-            <node x="210.4643513184844" y="0.0">com.javahelps.restservice.entity.Seats</node>
-            <node x="571.4732638888888" y="596.0">com.javahelps.restservice.entity.Train</node>
-            <node x="633.6409002176138" y="1618.0">com.javahelps.restservice.entity.Schedule</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Train">
-              <point x="-6.833333333333314" y="-68.0" />
-              <point x="708.8075668842805" y="1598.0" />
-              <point x="710.1409002176138" y="1598.0" />
-              <point x="710.1409002176138" y="932.0" />
-              <point x="707.2510416666667" y="932.0" />
-              <point x="41.77777777777777" y="68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Train">
-              <point x="47.0" y="101.0" />
-              <point x="625.2351846518177" y="466.0" />
-              <point x="688.9732638888888" y="466.0" />
-              <point x="23.5" y="-68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Carriage">
-              <point x="13.96875" y="-157.0" />
-              <point x="455.9392585125448" y="922.0" />
-              <point x="492.1488751280082" y="922.0" />
-              <point x="492.1488751280082" y="446.0" />
-              <point x="531.2351846518177" y="446.0" />
-              <point x="-47.0" y="101.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Type">
-              <point x="34.166666666666686" y="-68.0" />
-              <point x="749.8075668842805" y="1568.0" />
-              <point x="819.0409002176139" y="1568.0" />
-              <point x="-37.60000000000002" y="46.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Schedule">
-              <point x="37.60000000000002" y="46.0" />
-              <point x="894.2409002176139" y="1588.0" />
-              <point x="777.1409002176138" y="1588.0" />
-              <point x="61.5" y="-68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Carriage">
-              <point x="-62.66666666666666" y="101.0" />
-              <point x="515.5685179851511" y="426.0" />
-              <point x="487.73518465181775" y="426.0" />
-              <point x="487.73518465181775" y="305.0" />
-              <point x="-70.5" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Passenger" target="com.javahelps.restservice.entity.User">
-              <point x="79.20000000000005" y="91.5" />
-              <point x="428.70000000000005" y="476.0" />
-              <point x="450.9012560803892" y="476.0" />
-              <point x="159.42857142857144" y="-168.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Station">
-              <point x="-75.16666666666663" y="-68.0" />
-              <point x="640.4742335509472" y="1598.0" />
-              <point x="457.2770833333333" y="1598.0" />
-              <point x="-35.19999999999999" y="101.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Type">
-              <point x="-75.19999999999999" y="46.0" />
-              <point x="781.4409002176138" y="1493.0" />
-              <point x="742.6409002176138" y="1493.0" />
-              <point x="742.6409002176138" y="1427.0" />
-              <point x="-94.0" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Ticket">
-              <point x="-178.8" y="157.0" />
-              <point x="263.17050851254476" y="1286.0" />
-              <point x="198.4705085125448" y="1286.0" />
-              <point x="198.4705085125448" y="1109.0" />
-              <point x="-223.5" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Role">
-              <point x="-106.28571428571428" y="-168.0" />
-              <point x="185.18697036610348" y="476.0" />
-              <point x="155.375" y="476.0" />
-              <point x="18.375" y="69.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Station">
-              <point x="-70.4" y="101.0" />
-              <point x="422.07708333333323" y="1548.0" />
-              <point x="384.47708333333327" y="1548.0" />
-              <point x="384.47708333333327" y="1427.0" />
-              <point x="-88.0" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.User">
-              <point x="-97.78125" y="-157.0" />
-              <point x="344.1892585125448" y="892.0" />
-              <point x="217.07268465181778" y="892.0" />
-              <point x="-74.39999999999998" y="168.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Day">
-              <point x="0.0" y="-46.0" />
-              <point x="17.875" y="46.5" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Schedule">
-              <point x="70.39999999999998" y="101.0" />
-              <point x="562.8770833333333" y="1568.0" />
-              <point x="681.4742335509472" y="1568.0" />
-              <point x="-34.16666666666663" y="-68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Train">
-              <point x="125.71875" y="-157.0" />
-              <point x="567.6892585125448" y="912.0" />
-              <point x="602.8065972222221" y="912.0" />
-              <point x="-62.66666666666667" y="68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Seats">
-              <point x="-17.625" y="-101.0" />
-              <point x="560.6101846518177" y="174.0" />
-              <point x="312.29768465181775" y="174.0" />
-              <point x="31.333333333333343" y="57.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Ticket">
-              <point x="-20.888888888888886" y="68.0" />
-              <point x="644.5843749999999" y="932.0" />
-              <point x="623.5642585125448" y="932.0" />
-              <point x="181.59375" y="-157.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Schedule">
-              <point x="0.0" y="68.0" />
-              <point x="715.6409002176138" y="1774.0" />
-              <point x="613.6409002176138" y="1774.0" />
-              <point x="613.6409002176138" y="1686.0" />
-              <point x="-82.0" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Station">
-              <point x="178.80000000000007" y="157.0" />
-              <point x="620.7705085125449" y="1306.0" />
-              <point x="558.4770833333332" y="1306.0" />
-              <point x="66.0" y="-101.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Day" target="com.javahelps.restservice.entity.Type">
-              <point x="53.625" y="46.5" />
-              <point x="892.3909002176138" y="1306.0" />
-              <point x="919.3075668842805" y="1306.0" />
-              <point x="62.666666666666686" y="-46.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Seats">
-              <point x="-209.53125" y="-157.0" />
-              <point x="232.4392585125448" y="932.0" />
-              <point x="0.0" y="932.0" />
-              <point x="0.0" y="154.0" />
-              <point x="233.9643513184844" y="154.0" />
-              <point x="-47.0" y="57.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Schedule">
-              <point x="83.55555555555554" y="68.0" />
-              <point x="749.0288194444444" y="932.0" />
-              <point x="732.1409002176138" y="932.0" />
-              <point x="732.1409002176138" y="1598.0" />
-              <point x="736.1409002176138" y="1598.0" />
-              <point x="20.5" y="-68.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Ticket">
-              <point x="148.79999999999995" y="168.0" />
-              <point x="440.2726846518177" y="932.0" />
-              <point x="428.0017585125448" y="932.0" />
-              <point x="-13.96875" y="-157.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Ticket">
-              <point x="-31.333333333333343" y="101.0" />
-              <point x="546.9018513184844" y="456.0" />
-              <point x="503.1488751280082" y="456.0" />
-              <point x="503.1488751280082" y="932.0" />
-              <point x="483.8767585125448" y="932.0" />
-              <point x="41.90625" y="-157.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Carriage">
-              <point x="-70.5" y="-68.0" />
-              <point x="594.9732638888888" y="476.0" />
-              <point x="593.9018513184844" y="476.0" />
-              <point x="15.666666666666686" y="101.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Role" target="com.javahelps.restservice.entity.Role">
-              <point x="-55.125" y="69.0" />
-              <point x="81.875" y="394.0" />
-              <point x="43.5" y="394.0" />
-              <point x="43.5" y="305.0" />
-              <point x="-73.5" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Day" target="com.javahelps.restservice.entity.Day">
-              <point x="-53.625" y="46.5" />
-              <point x="785.1409002176138" y="1175.5" />
-              <point x="747.2659002176138" y="1175.5" />
-              <point x="747.2659002176138" y="1109.0" />
-              <point x="-71.5" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Passenger" target="com.javahelps.restservice.entity.Passenger">
-              <point x="-79.20000000000002" y="91.5" />
-              <point x="270.29999999999995" y="416.5" />
-              <point x="230.49999999999997" y="416.5" />
-              <point x="230.49999999999997" y="305.0" />
-              <point x="-99.0" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Passenger">
-              <point x="0.0" y="-168.0" />
-              <point x="291.47268465181776" y="476.0" />
-              <point x="309.9" y="476.0" />
-              <point x="-39.60000000000002" y="91.5" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Ticket">
-              <point x="-22.0" y="-101.0" />
-              <point x="470.47708333333327" y="1306.0" />
-              <point x="441.9705085125448" y="1306.0" />
-              <point x="0.0" y="157.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Ticket">
-              <point x="-31.333333333333343" y="57.0" />
-              <point x="249.63101798515106" y="164.0" />
-              <point x="11.0" y="164.0" />
-              <point x="11.0" y="922.0" />
-              <point x="260.3767585125448" y="922.0" />
-              <point x="-181.59375" y="-157.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Carriage">
-              <point x="62.666666666666686" y="57.0" />
-              <point x="343.63101798515106" y="154.0" />
-              <point x="631.1101846518177" y="154.0" />
-              <point x="52.875" y="-101.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Seats">
-              <point x="-62.66666666666666" y="57.0" />
-              <point x="218.29768465181775" y="134.0" />
-              <point x="190.4643513184844" y="134.0" />
-              <point x="190.4643513184844" y="57.0" />
-              <point x="-70.5" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Train">
-              <point x="-83.55555555555554" y="68.0" />
-              <point x="581.9177083333333" y="752.0" />
-              <point x="551.4732638888888" y="752.0" />
-              <point x="551.4732638888888" y="664.0" />
-              <point x="-94.0" y="-0.0" />
-            </edge>
-            <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.User">
-              <point x="-148.8" y="168.0" />
-              <point x="142.67268465181775" y="852.0" />
-              <point x="85.47268465181776" y="852.0" />
-              <point x="85.47268465181776" y="664.0" />
-              <point x="-186.0" y="-0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.3278158131644046" x="818.0" y="1321.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/PassengerSerializer.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.8.RELEASE/spring-data-jpa-1.11.8.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/PassengerController.java" />
     <entry file="file://$PROJECT_DIR$/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/data.sql">
@@ -1296,13 +952,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket2.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1347,16 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/TicketSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="161" column="19" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
@@ -1371,34 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="32" column="22" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="39" column="60" lean-forward="true" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1419,40 +1034,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Seats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1465,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="210">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1530,10 +1115,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/javahelps/restservice/controller/SearchController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#5393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/models/TrainCarriage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TrainRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="54" column="69" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.12.RELEASE/spring-aop-4.3.12.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="525" selection-start-line="525" selection-end-line="525" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/serializer/TicketSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1263">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.8.RELEASE/spring-data-jpa-1.11.8.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        <state relative-caret-position="176">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/repository/TickerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/entity/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="241" column="70" selection-start-line="241" selection-start-column="70" selection-end-line="241" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javahelps/restservice/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="74" column="61" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
