@@ -1,6 +1,9 @@
 package com.javahelps.restservice.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.FetchMode;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.type.OrderedSetType;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -93,10 +96,18 @@ public class Agent {
     private MainStation mainStation;
 
 
+    public Set<History> getHistory() {
+        return history;
+    }
+
+    public void setHistory(Set<History> history) {
+        this.history = history;
+    }
+
     @JsonManagedReference(value="agent-history")
     @OneToMany(mappedBy = "agent",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
-    private Set<History> history=new HashSet<>();
+    private Set<History> history=new LinkedHashSet<>();
 
     public Set<Adjustment> getAdjustment() {
         return adjustment;
@@ -109,6 +120,7 @@ public class Agent {
     @JsonManagedReference(value="agent-adjustment")
     @OneToMany(mappedBy = "agent",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
+    @Column(unique = true)
     private Set<Adjustment> adjustment=new HashSet<>();
 
 

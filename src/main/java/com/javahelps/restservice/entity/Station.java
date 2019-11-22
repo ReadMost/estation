@@ -127,9 +127,6 @@ public class Station {
         this.mainStation = mainStation;
     }
 
-
-
-
     @JsonBackReference(value="mainStation-station")
     @ManyToOne(fetch = FetchType.EAGER,optional = false)
     @JoinColumn(name="mainStation_id")

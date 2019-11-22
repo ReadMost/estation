@@ -5,9 +5,10 @@ import com.javahelps.restservice.serializer.AgentSerializer;
 import com.javahelps.restservice.serializer.Temp;
 import javassist.tools.web.BadHttpRequest;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
-import java.util.Date;
-import java.sql.Time;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import java.text.ParseException;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 
 @RestController
@@ -91,17 +96,6 @@ public class ManagerController {
         }
         return scheduleRepository.findOne(schedule_id);
     }
-//
-//    @DeleteMapping(value = "/mainStations/{mainStationName}/")
-//    public List<MainStation> updateStation(@PathVariable("mainStationName") String mainStationName) throws BadHttpRequest, ParseException {
-//        MainStation main=new MainStation();
-//        main=mainStationRepository.getMainStationByName(mainStationName);
-//        mainStationRepository.delete(main);
-//        mainStationRepository.flush();
-//        return mainStationRepository.findAll();
-//    }
-
-
 
     @PutMapping(value = "/mainStations")
     @ResponseBody
@@ -115,36 +109,59 @@ public class ManagerController {
     public Iterable<Agent> findAllAgents(){
         return agentRepository.findAll();
     }
-//    @PutMapping(value="/agents/{agent_id}")
-//    @ResponseBody
-//    Agent updateAgentHour(@PathVariable("agent_id") int agent_id, @RequestBody AgentSerializer agent){
+
+    @PutMapping(value="/agents/{agent_id}")
+    @ResponseBody
+    Agent updateAgentHour(@PathVariable("agent_id") int agent_id, @RequestBody AgentSerializer agent){
+        long hours= TimeUnit.MILLISECONDS.toHours((agentRepository.findOne(agent_id).getFrom().getTime()-agentRepository.findOne(agent_id).getTo().getTime())*-1);
+        Agent a=agentRepository.findOne(agent_id);
+        Adjustment adj=new Adjustment();
+        adj.setT(a.getTo());
+        adj.setFr(a.getFrom());
+        adj.setAdjustedDate(new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
+        adj.setTotalHours(hours);
+        adj.setAgent(a);
+        agentRepository.findOne(agent_id).setAdjustment(adj);
+        agentRepository.findOne(agent_id).setFrom(agent.getFrom());
+        agentRepository.findOne(agent_id).setTo(agent.getTo());
+        agentRepository.flush();
+        adjustmentRepository.flush();
+        return agentRepository.findOne(agent_id);
+    }
+
+
+
 //
-//        long hours= TimeUnit.MILLISECONDS.toHours((agentRepository.findOne(agent_id).getFrom().getTime()-agentRepository.findOne(agent_id).getTo().getTime())*-1);
+//    @GetMapping(value="/agents/{agent_id}")
+//        History getUpdatedHistory(@PathVariable("agent_id") int agent_id){
 //        Agent a=agentRepository.findOne(agent_id);
-//        Adjustment adj=new Adjustment();
-//        adj.setT(a.getTo());
-//        adj.setFr(a.getFrom());
-//        a.setFrom(agent.getFrom());
-//        a.setTo(agent.getTo());
-//        adj.setAdjustedDate(new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
-//        adj.setTotalHours(hours);
-//        adj.setAgent(a);
-//        adj.setT(a.getTo());
-//        adj.setFr(a.getFrom());
-//        a.setAdjustment(adj);
-//        agentRepository.save(a);
-//        adjustmentRepository.save(adj);
-//        agentRepository.flush();
-//        adjustmentRepository.flush();
-//        return agentRepository.findOne(agent_id);
-//    }
-
-
-
-//    public int getSalary(int agent_id){
-//        Agent agent = agentRepository.getOne(agent_id);
-//        History history = historyRepository.findByAgent_Id(agent_id);
+//        Set<History> history=a.getHistory();
+//       History hst=(History)history.toArray()[ history.size()-1];
+//       Date lastPayed=hst.getPayed();
+//       Date current=new java.sql.Date(Calendar.getInstance().getTimeInMillis());
+//       List<LocalDate> list = getDatesBetweenUsingJava9(lastPayed,current);
 //
+//        List<Date> daysRange = Stream.iterate(lastPayed, date -> date.(1)).limit(16).collect(Collectors.toList());
+//
+//       Double totalSalary;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//        return null;
 //    }
 
 

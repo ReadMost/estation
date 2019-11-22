@@ -19,6 +19,7 @@ public class Adjustment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long id;
 
     public Date getAdjustedDate() {
