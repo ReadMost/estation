@@ -81,9 +81,7 @@ public class SearchController {
                                                          @PathVariable("from") String from,
                                                          @PathVariable("to") String to,
                                                          @PathVariable("train") int train) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        java.util.Date yourDate = sdf.parse(date);
-        java.sql.Date day = new java.sql.Date(yourDate.getTime());
+
         List<Object[]> seats = trainRepository.findByDateDepArrByTrain(date,from, to, train);
         Map<Integer, TrainCarriage> carriages = new HashMap<>();
         for(Object[] seat: seats) {
@@ -95,7 +93,7 @@ public class SearchController {
             if (carriages.get(carriage_id) != null) {
                 carriages.get(carriage_id).seats.add(new Seat(seatEntity.getNumber(), seatEntity.getId()));
             } else {
-                carriages.put(carriage_id, new TrainCarriage(train_id, carriage_id, carriageEntity.getType(), new ArrayList<>()));
+                carriages.put(carriage_id, new TrainCarriage(train_id, carriage_id, carriageEntity.getNumber(), carriageEntity.getType(), new ArrayList<>()));
                 carriages.get(carriage_id).seats.add(new Seat(seatEntity.getNumber(), seatEntity.getId()));
             }
         }
