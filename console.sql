@@ -1,28 +1,3 @@
-INSERT INTO user (id, first_name, last_name, email, password) VALUES (1, 'Memory', 'Not Found', 'rauan.ru@gmail.com', '$2a$10$iLMfZCrw/YLyun0d2XyBTeipaeMIJaQl/srzNxi400u7v3zPbYa7W');
-
-INSERT INTO role (id, name) VALUES (1, 'ROLE_PASSENGER');
-INSERT INTO role (id, name) VALUES (2, 'ROLE_MANAGER');
-INSERT INTO role (id, name) VALUES (3, 'ROLE_EMPLOYEE');
-
-INSERT INTO users_roles (user_id, role_id) VALUES (1, 1);
-INSERT INTO users_roles (user_id, role_id) VALUES (1, 2);
-
-insert into train (train_id, number) values (1, "004Ц");
-insert into train (train_id, number) values (2, "807");
-insert into train (train_id, number) VALUES (3, "803");
-
-insert into carriage (id, number, type, actual_seats, train_id) values (1, 1, "kupe", 10, 1);
-insert into carriage (id, number, type, actual_seats, train_id) values (2, 2, "plackart", 10, 1);
-
-
-insert into day (id, name) values (1, "M");
-insert into day (id, name) values (2, "T");
-insert into day (id, name) values (3, "W");
-insert into day (id, name) values (4, "R");
-insert into day (id, name) values (5, "F");
-insert into day (id, name) values (6, "S");
-insert into day (id, name) values (7, "SD");
-
 
 insert into train (train_id, number) values (1, "004Ц");
 insert into train (train_id, number) values (2, "807");
@@ -66,7 +41,7 @@ insert into schedule (id, train_id, type_id) VALUES (1, 1, 1);
 insert into schedule (id, train_id, type_id) VALUES (2, 3, 1);
 insert into schedule (id, train_id, type_id) VALUES (3, 2, 1);
 
-insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Nurly-Zhol", "13:52:00", "17:16:00", 1, 1);
+insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Nurly-Zhol", null, "17:16:00", 1, 1);
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Karagandy", "19:52:00", "20:02:00", 1, 1);
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("AAA", "20:21:00", "20:25:00", 1, 1);
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Dariya", "20:54:00", "20:56:00", 1, 1);
@@ -83,3 +58,32 @@ insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Ot
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Almaty1", "07:52:00", "07:57:00", 2, 2);
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Almaty2", "08:15:00", null, 2, 2);
 
+
+
+select *
+from train as T1, schedule as S,
+     (select t.train_id as main_train, s.id as main_sch, ST1.dep_time as dep, ST2.dep_time as arr
+            FROM Train t, Schedule s, Station st1,  Station st2
+            where t.train_id = s.train_id
+              and st1.schedule_id = s.id
+              and  st2.schedule_id = s.id
+              and st1.name ="Dariya" and st2.name = "Akadyr"
+              and TIME(ST1.dep_time) < TIME(ST2.dep_time)
+              and TIME(ST1.day_num) <= TIME(ST2.day_num)
+            GROUP BY t.train_id) as Main, station as st
+where Main.main_train = T1.train_id and s.id = Main.main_sch and st.schedule_id = main.main_sch
+  and TIME(st.dep_time) >= TIME(Main.dep) and TIME(st.dep_time) < TIME(Main.arr);
+
+select t.train_id as main_train, s.id as main_sch
+FROM Train as T, Schedule as S, Station as ST1,  Station as ST2
+where t.train_id = s.train_id and St1.schedule_id = s.id  and  St2.schedule_id = s.id
+  and ST1.name ="Dariya" and ST2.name = "Akadyr"
+  and TIME(ST1.dep_time) < TIME(ST2.dep_time) and TIME(ST1.day_num) <= TIME(ST2.day_num)
+GROUP BY t.train_id;
+
+select count(station.name)
+FROM carriage as c, Train as T, Schedule as S, Station as ST1,  Station as ST2, station as station
+where t.train_id=c.train_id and t.train_id = s.train_id and St1.schedule_id = s.id  and  St2.schedule_id = s.id
+  and ST1.name ="Nurly-Zhol" and ST2.name = "Akadyr" and c.train_id=1 and station.schedule_id=s.id
+  and TIME(ST1.dep_time) < TIME(ST2.dep_time) and TIME(ST1.day_num) <= TIME(ST2.day_num) and station.arr_time>ST1.dep_time and station.arr_time<ST2.arr_time;
+#GROUP BY t.train_id;

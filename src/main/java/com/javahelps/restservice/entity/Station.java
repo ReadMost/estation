@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "station")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 public class Station {
 
     @Id

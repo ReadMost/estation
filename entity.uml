@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.javahelps.restservice.entity</OriginalElement>
+  <nodes>
+    <node x="404.47708333333327" y="1326.0">com.javahelps.restservice.entity.Station</node>
+    <node x="250.49999999999997" y="213.5">com.javahelps.restservice.entity.Passenger</node>
+    <node x="507.73518465181775" y="204.0">com.javahelps.restservice.entity.Carriage</node>
+    <node x="762.6409002176138" y="1381.0">com.javahelps.restservice.entity.Type</node>
+    <node x="218.4705085125448" y="952.0">com.javahelps.restservice.entity.Ticket</node>
+    <node x="105.47268465181776" y="496.0">com.javahelps.restservice.entity.User</node>
+    <node x="63.5" y="236.0">com.javahelps.restservice.entity.Role</node>
+    <node x="767.2659002176138" y="1062.5">com.javahelps.restservice.entity.Day</node>
+    <node x="210.4643513184844" y="0.0">com.javahelps.restservice.entity.Seats</node>
+    <node x="571.4732638888888" y="596.0">com.javahelps.restservice.entity.Train</node>
+    <node x="633.6409002176138" y="1618.0">com.javahelps.restservice.entity.Schedule</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Train">
+      <point x="-20.5" y="-68.0" />
+      <point x="695.1409002176138" y="1598.0" />
+      <point x="699.1409002176138" y="1598.0" />
+      <point x="699.1409002176138" y="932.0" />
+      <point x="686.3621527777777" y="932.0" />
+      <point x="20.888888888888886" y="68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Train">
+      <point x="62.666666666666686" y="101.0" />
+      <point x="640.9018513184844" y="456.0" />
+      <point x="735.9732638888888" y="456.0" />
+      <point x="70.5" y="-68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Carriage">
+      <point x="13.96875" y="-157.0" />
+      <point x="455.9392585125448" y="922.0" />
+      <point x="492.1488751280082" y="922.0" />
+      <point x="492.1488751280082" y="446.0" />
+      <point x="531.2351846518177" y="446.0" />
+      <point x="-47.0" y="101.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Type">
+      <point x="47.833333333333314" y="-68.0" />
+      <point x="763.4742335509471" y="1578.0" />
+      <point x="856.6409002176138" y="1578.0" />
+      <point x="0.0" y="46.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Schedule">
+      <point x="37.60000000000002" y="46.0" />
+      <point x="894.2409002176139" y="1588.0" />
+      <point x="777.1409002176138" y="1588.0" />
+      <point x="61.5" y="-68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Passenger" target="com.javahelps.restservice.entity.User">
+      <point x="79.20000000000005" y="91.5" />
+      <point x="428.70000000000005" y="476.0" />
+      <point x="450.9012560803892" y="476.0" />
+      <point x="159.42857142857144" y="-168.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Carriage">
+      <point x="-62.66666666666666" y="101.0" />
+      <point x="515.5685179851511" y="426.0" />
+      <point x="487.73518465181775" y="426.0" />
+      <point x="487.73518465181775" y="305.0" />
+      <point x="-70.5" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Station">
+      <point x="-61.49999999999994" y="-68.0" />
+      <point x="654.1409002176139" y="1588.0" />
+      <point x="492.47708333333327" y="1588.0" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Type">
+      <point x="-75.19999999999999" y="46.0" />
+      <point x="781.4409002176138" y="1493.0" />
+      <point x="742.6409002176138" y="1493.0" />
+      <point x="742.6409002176138" y="1427.0" />
+      <point x="-94.0" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Ticket">
+      <point x="-178.8" y="157.0" />
+      <point x="263.17050851254476" y="1286.0" />
+      <point x="198.4705085125448" y="1286.0" />
+      <point x="198.4705085125448" y="1109.0" />
+      <point x="-223.5" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Role">
+      <point x="-53.14285714285711" y="-168.0" />
+      <point x="238.32982750896065" y="476.0" />
+      <point x="192.125" y="476.0" />
+      <point x="55.125" y="69.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Station">
+      <point x="-70.4" y="101.0" />
+      <point x="422.07708333333323" y="1548.0" />
+      <point x="384.47708333333327" y="1548.0" />
+      <point x="384.47708333333327" y="1427.0" />
+      <point x="-88.0" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.User">
+      <point x="-69.84375" y="-157.0" />
+      <point x="372.1267585125448" y="882.0" />
+      <point x="291.47268465181776" y="882.0" />
+      <point x="0.0" y="168.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Type" target="com.javahelps.restservice.entity.Day">
+      <point x="0.0" y="-46.0" />
+      <point x="17.875" y="46.5" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Schedule">
+      <point x="35.200000000000045" y="101.0" />
+      <point x="527.6770833333333" y="1578.0" />
+      <point x="667.8075668842805" y="1578.0" />
+      <point x="-47.83333333333326" y="-68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Train">
+      <point x="125.71875" y="-157.0" />
+      <point x="567.6892585125448" y="912.0" />
+      <point x="602.8065972222221" y="912.0" />
+      <point x="-62.66666666666667" y="68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Ticket">
+      <point x="0.0" y="68.0" />
+      <point x="665.4732638888888" y="932.0" />
+      <point x="651.5017585125448" y="932.0" />
+      <point x="209.53125" y="-157.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Seats">
+      <point x="-17.625" y="-101.0" />
+      <point x="560.6101846518177" y="174.0" />
+      <point x="312.29768465181775" y="174.0" />
+      <point x="31.333333333333343" y="57.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Schedule" target="com.javahelps.restservice.entity.Schedule">
+      <point x="0.0" y="68.0" />
+      <point x="715.6409002176138" y="1774.0" />
+      <point x="613.6409002176138" y="1774.0" />
+      <point x="613.6409002176138" y="1686.0" />
+      <point x="-82.0" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Station">
+      <point x="178.80000000000007" y="157.0" />
+      <point x="620.7705085125449" y="1306.0" />
+      <point x="558.4770833333332" y="1306.0" />
+      <point x="66.0" y="-101.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Day" target="com.javahelps.restservice.entity.Type">
+      <point x="53.625" y="46.5" />
+      <point x="892.3909002176138" y="1306.0" />
+      <point x="919.3075668842805" y="1306.0" />
+      <point x="62.666666666666686" y="-46.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Ticket" target="com.javahelps.restservice.entity.Seats">
+      <point x="-209.53125" y="-157.0" />
+      <point x="232.4392585125448" y="932.0" />
+      <point x="0.0" y="932.0" />
+      <point x="0.0" y="154.0" />
+      <point x="233.9643513184844" y="154.0" />
+      <point x="-47.0" y="57.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Schedule">
+      <point x="83.55555555555554" y="68.0" />
+      <point x="749.0288194444444" y="932.0" />
+      <point x="732.1409002176138" y="932.0" />
+      <point x="732.1409002176138" y="1598.0" />
+      <point x="736.1409002176138" y="1598.0" />
+      <point x="20.5" y="-68.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Ticket">
+      <point x="74.39999999999998" y="168.0" />
+      <point x="365.87268465181774" y="872.0" />
+      <point x="400.0642585125448" y="872.0" />
+      <point x="-41.90625" y="-157.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Carriage" target="com.javahelps.restservice.entity.Ticket">
+      <point x="-31.333333333333343" y="101.0" />
+      <point x="546.9018513184844" y="456.0" />
+      <point x="503.1488751280082" y="456.0" />
+      <point x="503.1488751280082" y="932.0" />
+      <point x="483.8767585125448" y="932.0" />
+      <point x="41.90625" y="-157.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Carriage">
+      <point x="-23.5" y="-68.0" />
+      <point x="641.9732638888888" y="476.0" />
+      <point x="609.5685179851511" y="476.0" />
+      <point x="31.333333333333343" y="101.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Role" target="com.javahelps.restservice.entity.Role">
+      <point x="-55.125" y="69.0" />
+      <point x="81.875" y="394.0" />
+      <point x="43.5" y="394.0" />
+      <point x="43.5" y="305.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Day" target="com.javahelps.restservice.entity.Day">
+      <point x="-53.625" y="46.5" />
+      <point x="785.1409002176138" y="1175.5" />
+      <point x="747.2659002176138" y="1175.5" />
+      <point x="747.2659002176138" y="1109.0" />
+      <point x="-71.5" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Passenger" target="com.javahelps.restservice.entity.Passenger">
+      <point x="-79.20000000000002" y="91.5" />
+      <point x="270.29999999999995" y="416.5" />
+      <point x="230.49999999999997" y="416.5" />
+      <point x="230.49999999999997" y="305.0" />
+      <point x="-99.0" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.Passenger">
+      <point x="0.0" y="-168.0" />
+      <point x="291.47268465181776" y="476.0" />
+      <point x="309.9" y="476.0" />
+      <point x="-39.60000000000002" y="91.5" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Station" target="com.javahelps.restservice.entity.Ticket">
+      <point x="-22.0" y="-101.0" />
+      <point x="470.47708333333327" y="1306.0" />
+      <point x="441.9705085125448" y="1306.0" />
+      <point x="0.0" y="157.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Ticket">
+      <point x="-31.333333333333343" y="57.0" />
+      <point x="249.63101798515106" y="164.0" />
+      <point x="11.0" y="164.0" />
+      <point x="11.0" y="922.0" />
+      <point x="260.3767585125448" y="922.0" />
+      <point x="-181.59375" y="-157.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Carriage">
+      <point x="62.666666666666686" y="57.0" />
+      <point x="343.63101798515106" y="154.0" />
+      <point x="631.1101846518177" y="154.0" />
+      <point x="52.875" y="-101.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Train" target="com.javahelps.restservice.entity.Train">
+      <point x="-83.55555555555554" y="68.0" />
+      <point x="581.9177083333333" y="752.0" />
+      <point x="551.4732638888888" y="752.0" />
+      <point x="551.4732638888888" y="664.0" />
+      <point x="-94.0" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.Seats" target="com.javahelps.restservice.entity.Seats">
+      <point x="-62.66666666666666" y="57.0" />
+      <point x="218.29768465181775" y="134.0" />
+      <point x="190.4643513184844" y="134.0" />
+      <point x="190.4643513184844" y="57.0" />
+      <point x="-70.5" y="-0.0" />
+    </edge>
+    <edge source="com.javahelps.restservice.entity.User" target="com.javahelps.restservice.entity.User">
+      <point x="-148.8" y="168.0" />
+      <point x="142.67268465181775" y="852.0" />
+      <point x="85.47268465181776" y="852.0" />
+      <point x="85.47268465181776" y="664.0" />
+      <point x="-186.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3278158131644046" x="845.7313617524085" y="954.5833183920186" />
+  <SelectedNodes>
+    <node>com.javahelps.restservice.entity.User</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

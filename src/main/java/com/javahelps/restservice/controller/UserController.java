@@ -5,6 +5,7 @@ import com.javahelps.restservice.entity.Role;
 import com.javahelps.restservice.repository.RoleRepository;
 import com.javahelps.restservice.serializer.UserSerializer;
 
+import com.javahelps.restservice.serializer.UserUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -73,12 +74,13 @@ public class UserController {
     }
 
     @PutMapping(path = "/{id}")
-    public User update(@PathVariable("id") Long id, @RequestBody User user) throws BadHttpRequest {
+    public User update_user(@PathVariable("id") Long id, @RequestBody UserUpdate user) throws BadHttpRequest {
         if (repository.exists(id)) {
             System.out.println(user.getFirstName());
-            repository.updateUser(user.getFirstName(), user.getLastName(), id);
-            User u = repository.findById(id);
-            return u;
+            User u = repository.getOne(id);
+            u.setFirstName(user.getFirstName());
+            u.setLastName(user.getLastName());
+            return repository.save(u);
         } else {
             throw new BadHttpRequest();
         }

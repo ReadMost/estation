@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="seats", uniqueConstraints = @UniqueConstraint(columnNames = {"seat_id", "carriage_id"}))
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 public class Seats implements Serializable {
 
     @JsonBackReference(value="carriage-seat")

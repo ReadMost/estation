@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="carriage", uniqueConstraints = @UniqueConstraint(columnNames = {"train_id", "carriage_id"}))
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="carriage_id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non_sense")
 public class Carriage {
 
     @Id

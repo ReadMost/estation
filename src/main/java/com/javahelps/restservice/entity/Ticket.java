@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"seats_id", "carriage_id", "user_id", "train_id"}))
 public class Ticket implements java.io.Serializable {

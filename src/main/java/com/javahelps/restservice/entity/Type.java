@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Table(name="type")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 public class Type {
 
     @Id

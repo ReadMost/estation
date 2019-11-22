@@ -13,7 +13,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 @Entity
 @Table(name="schedule")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="id")
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class, property="non-sense")
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
