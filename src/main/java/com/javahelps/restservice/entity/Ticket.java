@@ -128,7 +128,7 @@ public class Ticket implements java.io.Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
-    @JsonBackReference(value="user-get")
+    @JsonBackReference(value = "user-get-ticket")
     private User user;
 
     @ManyToOne

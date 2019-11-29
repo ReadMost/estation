@@ -1,6 +1,7 @@
 package com.javahelps.restservice.serializer;
 
 
+import java.sql.Time;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -35,6 +36,20 @@ public class Temp {
         this.station = station;
     }
 
+
+    @JsonProperty("depTime")
+    private Time depTime;
+
+    @JsonProperty("arrTime")
+    private Time arrTime;
+
+    @JsonProperty("dayNum")
+    private int dayNum;
+
+
+
+
+
     @JsonProperty("name")
     public String getName() {
         return name;
@@ -43,6 +58,40 @@ public class Temp {
     @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
+    }
+
+    @JsonProperty("depTime")
+    public Time getDepTime() {
+        return depTime;
+    }
+
+    @JsonProperty("depTime")
+    public void setDepTime(Time depTime) {
+        this.depTime = depTime;
+    }
+
+    @JsonProperty("arrTime")
+    public Time getArrTime() {
+        return arrTime;
+    }
+
+    @JsonProperty("arrTime")
+    public void setArrTime(Time arrTime) {
+        this.arrTime = arrTime;
+    }
+
+    @JsonProperty("dayNum")
+    public int getDayNum() {
+        return dayNum;
+    }
+
+    @JsonProperty("dayNum")
+    public void setDayNum(int dayNum) {
+        this.dayNum = dayNum;
+    }
+
+    public void setAdditionalProperties(Map<String, Object> additionalProperties) {
+        this.additionalProperties = additionalProperties;
     }
 
     @JsonAnyGetter

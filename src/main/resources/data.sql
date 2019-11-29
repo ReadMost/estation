@@ -1,3 +1,7 @@
+--
+-- INSERT INTO role (id, name) VALUES (1, 'ROLE_PASSENGER');
+-- INSERT INTO role (id, name) VALUES (2, 'ROLE_MANAGER');
+-- INSERT INTO role (id, name) VALUES (3, 'ROLE_EMPLOYEE');
 
 insert into train (train_id, number) values (1, "line1");
 insert into train (train_id, number) values (2, "line2");
@@ -76,3 +80,13 @@ insert into station (id,main_station_id, arr_time, dep_time, day_num, schedule_i
  --line 3 two
 insert into station (id,main_station_id, arr_time, dep_time, day_num, schedule_id) values (13,5, null, "19:00:00", 1, 3);
 insert into station (id,main_station_id, arr_time, dep_time, day_num, schedule_id) values (14,1, "12:00:00", null, 1, 3);
+
+
+-- insert into user (id,email, first_name, last_name, password) VALUES (2,"beverly@email", "Beverly", "Crusher", "2244123");
+-- insert into users_roles (user_id, role_id) VALUES (2, 1);
+-- insert into ticket (date, document_id, f_name, l_name, price, status, carriage_id, from_station_id, seats_id,
+--                     to_station_id, train_id, user_id)
+-- values ('2019-09-2', 987654321, "Beverly", "Crusher", 1200, "booked", 1, 1, 1, 2, 1, 2);
+
+
+-- insert into agent(id,hired,quit,wage,workfrom,workto,main_station_id) values(1,'2019-11-16',null,12,"08:00:00", "17:00:00",1);

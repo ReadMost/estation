@@ -101,7 +101,7 @@ public class Carriage {
     }
 
 
-    @JsonManagedReference
+    @JsonManagedReference(value="carriage-get")
     @OneToMany(mappedBy = "carriage",cascade = CascadeType.ALL,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Ticket> ticket=new HashSet<>(0);

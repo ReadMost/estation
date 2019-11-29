@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.javahelps.restservice.entity.Agent;
 import com.javahelps.restservice.entity.Role;
 import com.javahelps.restservice.entity.User;
 
@@ -21,7 +22,8 @@ import com.javahelps.restservice.entity.User;
         "firstName",
         "lastName",
         "password",
-        "roles"
+        "roles",
+        "agent"
 })
 public class UserSerializer {
 
@@ -35,6 +37,19 @@ public class UserSerializer {
     private String password;
     @JsonProperty("roles")
     private List<Role> roles = null;
+    @JsonProperty("agent")
+    public Agent getAgent() {
+        return agent;
+    }
+    @JsonProperty("agent")
+    public void setAgent(Agent agent) {
+        this.agent = agent;
+    }
+
+    @JsonProperty("agent")
+    private Agent agent;
+
+
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 

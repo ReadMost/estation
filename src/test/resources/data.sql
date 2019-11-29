@@ -83,3 +83,10 @@ insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Ot
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Almaty1", "07:52:00", "07:57:00", 2, 2);
 insert into station (name, arr_time, dep_time, day_num, schedule_id) values ("Almaty2", "08:15:00", null, 2, 2);
 
+insert into user (id,email, first_name, last_name, password) VALUES (2,"beverly@email", "Beverly", "Crusher", "2244123");
+insert into users_roles (user_id, role_id) VALUES (2, 1);
+insert into ticket (date, document_id, f_name, l_name, price, status, carriage_id, from_station_id, seats_id,
+                    to_station_id, train_id, user_id)
+values ('2019-09-2', 987654321, "Beverly", "Crusher", 1200, "booked", 1, 1, 1, 2, 1, 2);
+
+

@@ -31,7 +31,7 @@ public class User {
 
     private String firstName;
     private String lastName;
-    @Email(message="Invalid email")
+    @Email(message = "Invalid email")
     @NotNull
     @NotEmpty
     private String email;
@@ -47,11 +47,12 @@ public class User {
                     name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
-    private Collection<Role> roles =  new ArrayList<Role>();
+    private Collection<Role> roles = new ArrayList<Role>();
 
-    public User(){
+    public User() {
 
     }
+
     public User(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -116,7 +117,7 @@ public class User {
         this.roles = roles;
     }
 
-    public void addRoles(Role role){
+    public void addRoles(Role role) {
         this.roles.add(role);
     }
 
@@ -146,19 +147,42 @@ public class User {
 //    @Value("${some.key:}")
 //    private Set<Passenger> passengers;
 
-    @JsonManagedReference(value="user-get")
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,
-            orphanRemoval = true,fetch = FetchType.EAGER)
-    private Set<Ticket> ticket=new HashSet<>(0);
+    @JsonManagedReference(value = "user-get-ticket")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,
+            orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Ticket> ticket = new HashSet<>(0);
 
-//    @JsonManagedReference(value="user-movement-get")
+    //    @JsonManagedReference(value="user-movement-get")
     public Set<Ticket> getTicket() {
         return ticket;
     }
 
-//    @JsonManagedReference(value="user-movement-set")
+    //    @JsonManagedReference(value="user-movement-set")
     public void setTicket(Set<Ticket> ticket) {
         this.ticket = ticket;
     }
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "manager_id")
+    private Manager manager;
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "agent_id")
+    private Agent agent;
+
+    public Agent getAgent() {
+        return agent;
+    }
+
+    public void setAgent(Agent agent) {
+        this.agent = agent;
+    }
 }

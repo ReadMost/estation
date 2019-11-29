@@ -44,13 +44,11 @@ public class Manager {
         this.phone = phone;
     }
 
-    @JsonIgnore
-    @JsonManagedReference
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name="user_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "station_id")
-    private Station station;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "station_id")
+//    private Station station;
 }

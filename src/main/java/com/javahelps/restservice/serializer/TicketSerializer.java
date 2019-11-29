@@ -172,6 +172,20 @@ public class TicketSerializer {
         this.additionalProperties.put(name, value);
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "Document_id=" + documentId +
+                ", firstName='" + fName + '\'' +
+                ", lastName='" + lName + '\'' +
+                ", train='" + train + '\'' +
+                ", carriage='" + carriage + '\'' +
+                ", seat='" + seat + '\'' +
+                ", from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", price='" + price +'\'' +
+                '}';
+    }
 //    public Ticket createTicket((int document_id, String lName, String fName, Carriage carriage, Seats seat, Station from, Station to, Train train, User user, Integer price){
 //
 //    }

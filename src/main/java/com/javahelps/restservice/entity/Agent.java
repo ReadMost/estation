@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.util.Date;
 
 @Entity
 @Table(name="agent")
@@ -14,8 +15,8 @@ public class Agent {
     int id;
 
     int salary;
-    Time workedSince;
-    Time workedTill;
+    Date workedSince;
+    Date workedTill;
     Time workDailyFrom;
     Time workDailyTill;
 
@@ -39,29 +40,49 @@ public class Agent {
         return salary;
     }
 
+    public Agent(int salary, Time workedSince, Time workedTill, Time workDailyFrom, Time workDailyTill, User user) {
+        this.salary = salary;
+        this.workedSince = workedSince;
+        this.workedTill = workedTill;
+        this.workDailyFrom = workDailyFrom;
+        this.workDailyTill = workDailyTill;
+        this.user = user;
+    }
+
+    public Agent() {
+    }
+
     public void setSalary(int salary) {
         this.salary = salary;
     }
 
-    public Time getWorkedSince() {
+    public Date getWorkedSince() {
         return workedSince;
     }
 
-    public void setWorkedSince(Time workedSince) {
+    public void setWorkedSince(Date workedSince) {
         this.workedSince = workedSince;
     }
 
-    public Time getWorkedTill() {
+    public Date getWorkedTill() {
         return workedTill;
     }
 
-    public void setWorkedTill(Time workedTill) {
+    public void setWorkedTill(Date workedTill) {
         this.workedTill = workedTill;
     }
 
     public int getId() {  return id; }
 
     public void setId(int id) { this.id = id; }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
