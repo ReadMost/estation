@@ -2,6 +2,7 @@ package com.javahelps.restservice.controller;
 
 
 import com.javahelps.restservice.config.LogConfig;
+import com.javahelps.restservice.entity.Agent;
 import com.javahelps.restservice.entity.Log;
 import com.javahelps.restservice.entity.Role;
 import com.javahelps.restservice.repository.AgentRepository;
@@ -76,7 +77,9 @@ public class UserController {
         addLog("creating new user with parameters: " + user, "POST:" + httpServletRequest.getRequestURL());
         User u = repository.save(user.createUser());
         try {
+            user.getAgent().setUser(u);
             u.setAgent(agentRepository.save(user.getAgent()));
+
         }catch (Exception e){
             System.out.println(e.toString());
         }
@@ -169,5 +172,29 @@ public class UserController {
         log.setDateTime(LocalDateTime.now());
         logRepository.save(log);
     }
+
+//    ---------------------- Agent
+@PutMapping(path = "agent/{id}")
+public Agent update_agent(@PathVariable("id") int id, @RequestBody Agent agent, HttpServletRequest httpServletRequest) throws BadHttpRequest {
+    if (agentRepository.exists(id)) {
+        System.out.println(agent.toString());
+        Agent initial = agentRepository.getOne(id);
+
+        initial.setWorkDailyFrom(agent.getWorkDailyFrom());
+        initial.setWorkDailyTill(agent.getWorkDailyTill());
+        initial.setWorkedSince(agent.getWorkedSince());
+        initial.setWorkedTill(agent.getWorkedTill());
+        initial.setSalary(agent.getSalary());
+
+
+        addLog("updating agent with id: " + id +" with parameters: " + agent + "SUCCESS",
+                "PUT:" + httpServletRequest.getRequestURL());
+        return agentRepository.save(initial);
+    } else {
+        addLog("updating agent with id: " + id +" with parameters: " + agent + "FAILURE",
+                "PUT:" + httpServletRequest.getRequestURL());
+        throw new BadHttpRequest();
+    }
+}
 
 }

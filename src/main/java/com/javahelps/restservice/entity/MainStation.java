@@ -1,6 +1,7 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
@@ -55,6 +56,18 @@ public class MainStation {
     public void setStations(Set<Station> stations) {
         this.stations = stations;
     }
+//    @JsonIgnore
+    public Manager getManager() {
+        return manager;
+    }
+
+//    public Long getMainStation_id() {
+//        return manager.getId();
+//    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
 
     @JsonManagedReference(value="mainStation-station")
     @OneToMany(mappedBy = "mainStation", cascade = CascadeType.ALL,
@@ -85,4 +98,11 @@ public class MainStation {
     public void delStation(Station station){
         stations.remove(station);
     }
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "manager_id")
+    private Manager manager;
+
+
 }

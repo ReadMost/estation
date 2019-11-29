@@ -7,6 +7,10 @@ import javax.persistence.*;
 
 @Entity
 public class Manager {
+    public Long getId() {
+        return id;
+    }
+
     @Id
     @GeneratedValue
     private Long id;
@@ -48,7 +52,15 @@ public class Manager {
     @JoinColumn(name = "user_id")
     private User user;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "station_id")
-//    private Station station;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "main_station_id")
+    private MainStation mainStation;
+
+    public MainStation getMainStation() {
+        return mainStation;
+    }
+
+    public void setMainStation(MainStation mainStation) {
+        this.mainStation = mainStation;
+    }
 }

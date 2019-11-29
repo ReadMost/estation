@@ -176,6 +176,7 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "agent_id")
+    @JsonManagedReference(value = "user-agent")
     private Agent agent;
 
     public Agent getAgent() {

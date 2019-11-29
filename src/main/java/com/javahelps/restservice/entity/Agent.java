@@ -1,6 +1,8 @@
 package com.javahelps.restservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.sql.Time;
@@ -84,8 +86,10 @@ public class Agent {
         this.user = user;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToOne(fetch=FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JsonBackReference(value = "user-agent")
     private User user;
 
 
