@@ -130,6 +130,14 @@ public class Station {
         return mainStation.getName();
     }
 
+    public Long getLongitude(){
+        return mainStation.getLongitude();
+    }
+
+    public Long getLatitude(){
+        return mainStation.getLatitude();
+    }
+
     public int getMainStation_id(){
         return mainStation.getId();
     }

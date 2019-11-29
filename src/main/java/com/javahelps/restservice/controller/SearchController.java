@@ -4,12 +4,13 @@ import com.javahelps.restservice.entity.*;
 import com.javahelps.restservice.models.Seat;
 import com.javahelps.restservice.models.TrainCarriage;
 import com.javahelps.restservice.repository.*;
+import com.javahelps.restservice.serializer.MainStationSerializer;
+import com.javahelps.restservice.serializer.UserSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -47,6 +48,10 @@ public class SearchController {
         return stationRepository.findAll();
     }
 
+    @PostMapping(path="/mainStations", consumes = "application/json")
+    public MainStation create(@RequestBody MainStationSerializer station, HttpServletRequest httpServletRequest) {
+        return mainStationRepository.save(station.createMainStation());
+    }
 
     @GetMapping("/mainStations")
     public Iterable<MainStation> findAllMainStations() {
