@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -65,5 +66,14 @@ public class MainStation {
 
     public void setLatitude(Long latitude) {
         this.latitude = latitude;
+    }
+
+    @Transactional
+    public void setStation(Station station){
+        stations.add(station);
+    }
+    @Transactional
+    public void delStation(Station station){
+        stations.remove(station);
     }
 }

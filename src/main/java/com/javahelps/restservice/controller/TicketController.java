@@ -1,13 +1,19 @@
 package com.javahelps.restservice.controller;
 
+import com.javahelps.restservice.config.LogConfig;
 import com.javahelps.restservice.entity.*;
 import com.javahelps.restservice.repository.*;
 
 import com.javahelps.restservice.serializer.TicketSerializer;
 import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -15,6 +21,9 @@ import java.util.List;
 public class TicketController {
     @Autowired
     private TickerRepository tickerRepository;
+
+    @Autowired
+    private LogRepository logRepository;
 
     @Autowired
     private StationRepository stationRepository;
@@ -37,7 +46,9 @@ public class TicketController {
     }
 
     @PostMapping(consumes = "application/json")
-    public Ticket create(@RequestBody TicketSerializer t) {
+    public Ticket create(@RequestBody TicketSerializer t, HttpServletRequest httpServletRequest) {
+        addLog("creating new ticket with parameters: " + t,
+                "POST:" + httpServletRequest.getRequestURL());
         Ticket ticket = new Ticket(t.getDocumentId(), t.getLName(), t.getFName(), carriageRepository.getOne(t.getCarriage()),
                 seatsRepository.getOne(t.getSeat()), stationRepository.getOne(t.getFrom()), stationRepository.getOne(t.getTo()),
                 trainRepository.getOne(t.getTrain()), userRepository.getOne(t.getUser()), t.getPrice(), t.getDate()
@@ -88,6 +99,24 @@ public class TicketController {
         } else {
             throw new BadHttpRequest();
         }
+    }
+
+    public void addLog(String content, String requestType) {
+        if (!LogConfig.isEnabled) return;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean notAuthenticated = authentication instanceof AnonymousAuthenticationToken;
+        Log log = new Log();
+        if (!notAuthenticated) {
+            String username = ((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername();
+            User user = userRepository.findByEmail(username);
+            log.setUser_id(user.getId());
+        }
+        else
+            log.setUser_id(-1);
+        log.setContent_type(content);
+        log.setRequest_type(requestType);
+        log.setDateTime(LocalDateTime.now());
+        logRepository.save(log);
     }
 
 //

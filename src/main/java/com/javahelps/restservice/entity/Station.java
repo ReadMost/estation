@@ -32,6 +32,12 @@ public class Station {
         this.dayNum = dayNum;
     }
 
+    public Station(Time arrTime, Time depTime, int dayNum){
+        this.arrTime=arrTime;
+        this.depTime=depTime;
+        this.dayNum=dayNum;
+    }
+
     @JsonBackReference(value = "schedule-station")
     @ManyToOne
     private Schedule schedule;

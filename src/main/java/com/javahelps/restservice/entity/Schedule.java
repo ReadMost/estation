@@ -30,7 +30,7 @@ public class Schedule {
     private Type type;
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL,
+    @OneToMany(mappedBy = "schedule", cascade = CascadeType.MERGE,
             orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<Station> stations=new HashSet<>(0);
 
@@ -46,6 +46,11 @@ public class Schedule {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+
+    public int getTrain_id() {
+        return train.getId();
     }
 
     public void setType(Type type) {
@@ -65,6 +70,18 @@ public class Schedule {
             }
         }
     }
+
+    @javax.transaction.Transactional
+    public Station getStationByName(String name){
+        for(Station station: stations){
+            if(station.getMainStation().getName().equals(name)){
+                System.out.println(station);
+                return station;
+            }
+        }
+        return null;
+    }
+
     @Transactional
     public void set(Station station){
         stations.add(station);

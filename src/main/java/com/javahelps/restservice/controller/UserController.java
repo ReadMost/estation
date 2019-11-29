@@ -1,7 +1,10 @@
 package com.javahelps.restservice.controller;
 
 
+import com.javahelps.restservice.config.LogConfig;
+import com.javahelps.restservice.entity.Log;
 import com.javahelps.restservice.entity.Role;
+import com.javahelps.restservice.repository.LogRepository;
 import com.javahelps.restservice.repository.RoleRepository;
 import com.javahelps.restservice.serializer.UserSerializer;
 
@@ -19,8 +22,10 @@ import com.javahelps.restservice.repository.UserRepository;
 
 import javassist.tools.web.BadHttpRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.security.Principal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import java.util.Collection;
@@ -34,10 +39,14 @@ public class UserController {
     private UserRepository repository;
 
     @Autowired
+    private LogRepository logRepository;
+
+    @Autowired
     private RoleRepository roleRepository;
 
     @GetMapping
-    public Iterable<User> findAll() {
+    public Iterable<User> findAll(HttpServletRequest httpServletRequest) {
+        addLog("get all users' list", "GET:"+ httpServletRequest.getRequestURL());
         return repository.findAll();
     }
 
@@ -53,17 +62,19 @@ public class UserController {
 
 
     @PostMapping(consumes = "application/json")
-    public User create(@RequestBody UserSerializer user) {
+    public User create(@RequestBody UserSerializer user, HttpServletRequest httpServletRequest) {
         System.out.println(user.getRoles());
         Role r = createRoleIfNotFound("ROLE_PASSENGER");
         String encodedPassword = new BCryptPasswordEncoder().encode(user.getPassword());
         user.setPassword(encodedPassword);
         user.addRoles(r);
+        addLog("creating new user with parameters: " + user, "POST:" + httpServletRequest.getRequestURL());
         return repository.save(user.createUser());
     }
 
     @DeleteMapping(path = "/{id}")
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") Long id, HttpServletRequest httpServletRequest) {
+        addLog("deleting  user with id: " + id, "DELETE:" + httpServletRequest.getRequestURL());
         repository.delete(id);
     }
 
@@ -74,14 +85,18 @@ public class UserController {
     }
 
     @PutMapping(path = "/{id}")
-    public User update_user(@PathVariable("id") Long id, @RequestBody UserUpdate user) throws BadHttpRequest {
+    public User update_user(@PathVariable("id") Long id, @RequestBody UserUpdate user, HttpServletRequest httpServletRequest) throws BadHttpRequest {
         if (repository.exists(id)) {
             System.out.println(user.getFirstName());
             User u = repository.getOne(id);
             u.setFirstName(user.getFirstName());
             u.setLastName(user.getLastName());
+            addLog("updating user with id: " + id +" with parameters: " + user + "SUCCESS",
+                    "PUT:" + httpServletRequest.getRequestURL());
             return repository.save(u);
         } else {
+            addLog("updating user with id: " + id +" with parameters: " + user + "FAILURE",
+                    "PUT:" + httpServletRequest.getRequestURL());
             throw new BadHttpRequest();
         }
     }
@@ -120,6 +135,25 @@ public class UserController {
             roleRepository.save(role);
         }
         return role;
+    }
+
+
+    public void addLog(String content, String requestType) {
+        if (!LogConfig.isEnabled) return;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean notAuthenticated = authentication instanceof AnonymousAuthenticationToken;
+        Log log = new Log();
+        if (!notAuthenticated) {
+            String username = ((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername();
+            User user = repository.findByEmail(username);
+            log.setUser_id(user.getId());
+        }
+        else
+            log.setUser_id(-1);
+        log.setContent_type(content);
+        log.setRequest_type(requestType);
+        log.setDateTime(LocalDateTime.now());
+        logRepository.save(log);
     }
 
 }
