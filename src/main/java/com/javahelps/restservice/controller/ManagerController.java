@@ -3,10 +3,13 @@ import java.sql.Time;
 import com.javahelps.restservice.entity.*;
 import com.javahelps.restservice.repository.*;
 import com.javahelps.restservice.serializer.Temp;
+import com.javahelps.restservice.serializer.UserSerializer;
 import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.io.StreamTokenizer;
 import java.text.ParseException;

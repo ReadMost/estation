@@ -23,6 +23,15 @@ public class MainStation {
 
     private Long latitude;
 
+    public MainStation() {
+    }
+
+    public MainStation(String name, Long longitude, Long latitude) {
+        this.name = name;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
     public int getId() {
         return mainStation_id;
     }
