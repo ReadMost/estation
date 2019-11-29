@@ -75,7 +75,12 @@ public class UserController {
         user.addRoles(r);
         addLog("creating new user with parameters: " + user, "POST:" + httpServletRequest.getRequestURL());
         User u = repository.save(user.createUser());
-        u.setAgent(agentRepository.save(user.getAgent()));
+        try {
+            u.setAgent(agentRepository.save(user.getAgent()));
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+
         return repository.save(u);
     }
 

@@ -22,9 +22,9 @@ import com.javahelps.restservice.entity.User;
         "firstName",
         "lastName",
         "password",
-        "roles",
-        "agent"
+        "roles"
 })
+
 public class UserSerializer {
 
     @JsonProperty("email")
